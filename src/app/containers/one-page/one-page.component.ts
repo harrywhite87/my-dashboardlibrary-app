@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-pagefull',
-  templateUrl: './pagefull.component.html',
-  styleUrls: ['./pagefull.component.scss']
+  selector: 'app-one-page',
+  templateUrl: './one-page.component.html',
+  styleUrls: ['./one-page.component.scss']
 })
-export class PagefullComponent implements OnInit {
+export class OnePageComponent implements OnInit {
   sidebarText : string = "Home";
   taboneText : string = "Days";
   tabtwoText : string = "Weeks";
