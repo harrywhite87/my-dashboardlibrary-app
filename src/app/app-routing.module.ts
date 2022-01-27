@@ -9,7 +9,7 @@ import { PagerndComponent } from './containers/pagernd/pagernd.component'
 import { PagefullComponent } from './containers/pagefull/pagefull.component'
 
 const routes: Routes = [
-  {path: '', redirectTo: '/pageone', pathMatch: 'full'},
+  {path: '', redirectTo: '/pagefull', pathMatch: 'full'},
   {path: 'pageone', component: PageoneComponent},
   {path: 'pagetwo', component: PagetwoComponent},
   {path: 'pagethree', component: PagethreeComponent},
