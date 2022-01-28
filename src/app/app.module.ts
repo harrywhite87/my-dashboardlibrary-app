@@ -3,8 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { TestComponent } from './test/test.component';
-import { TestDetailsComponent } from './test-details/test-details.component';
 import { ColorboxTextComponent } from './components/colorItems/colorbox-text/colorbox-text.component';
 import { TitleHorizontallineComponent } from './components/colorItems/title-horizontalline/title-horizontalline.component';
 import { NavComponent } from './nav/nav.component';
@@ -34,8 +32,6 @@ import { ItemBarchartComponent } from './components/item-barchart/item-barchart.
 @NgModule({
   declarations: [
     AppComponent,
-    TestComponent,
-    TestDetailsComponent,
     ColorboxTextComponent,
     TitleHorizontallineComponent,
     NavComponent,
