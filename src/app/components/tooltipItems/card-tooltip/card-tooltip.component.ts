@@ -6,8 +6,7 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./card-tooltip.component.scss']
 })
 export class CardTooltipComponent implements OnInit {
-  // titletooltipText : string = ""
-  @Input() titletooltipText = ''; // decorate the property with @Input()
+  @Input() titletooltipText = '';
   constructor() { }
 
   ngOnInit(): void {
