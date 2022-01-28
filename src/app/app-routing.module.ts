@@ -9,7 +9,7 @@ import { ChartsPageComponent } from './containers/charts-page/charts-page.compon
 const routes: Routes = [
   {path: '', redirectTo: '/one-page', pathMatch: 'full'},
   {path: 'title-horizontalline', component: TitleHorizontallineComponent},
-  // {path: 'pagernd', component: PagerndComponent},
+  {path: 'pagernd', component: PagerndComponent},
   {path: 'one-page', component: OnePageComponent},
   {path: 'charts-page', component: ChartsPageComponent},
 ];

@@ -58,16 +58,17 @@ nav {
     }
     
     .nav-item a {
-        color: white;
+        color: rgb(172, 172, 172);
         height: 100%;
-        padding: 10px 10px;
-        border-bottom: 4px solid transparent;
+        // padding: 10px 10px;
+        // border-bottom: 4px solid transparent;
     }
 
     .nav-item a:hover,
     .nav-item a:active,
     .nav-item a.active {
-        border-bottom: 4px solid #006c94;
-        color: white;
+        color: #fff
+        // border-bottom: 4px solid #006c94;
+        // color: white;
     }
 }

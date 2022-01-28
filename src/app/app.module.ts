@@ -29,6 +29,7 @@ import { ItemLegendComponent } from './components/item-legend/item-legend.compon
 import { ItemTablesComponent } from './components/item-tables/item-tables.component';
 import { ChartsPageComponent } from './containers/charts-page/charts-page.component';
 import { OnePageComponent } from './containers/one-page/one-page.component';
+import { ItemBarchartComponent } from './components/item-barchart/item-barchart.component';
 
 @NgModule({
   declarations: [
@@ -58,6 +59,7 @@ import { OnePageComponent } from './containers/one-page/one-page.component';
     ItemTablesComponent,
     ChartsPageComponent,
     OnePageComponent,
+    ItemBarchartComponent,
   ],
   imports: [
     BrowserModule,

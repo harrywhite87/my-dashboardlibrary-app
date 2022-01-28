@@ -1,0 +1,12 @@
+//ROW1
+.ROW1-flexbox-container {
+    display: flex;
+    justify-content: flex-start; //this is the default value === left
+}
+.ROW1-flexbox-row {
+    width: 7500px;
+    margin: 10px;
+}
+.ROW1-flexbox-row-1 {
+    min-height: 500px;
+}
