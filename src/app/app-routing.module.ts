@@ -1,13 +1,16 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { PagerndComponent } from './containers/pagernd/pagernd.component'
+import { PagerndComponent } from './RND/pagernd/pagernd.component'
 import { OnePageComponent } from './containers/one-page/one-page.component'
 import { ChartsPageComponent } from './containers/charts-page/charts-page.component'
+import { UiInventoryPageComponent } from './containers/ui-inventory-page/ui-inventory-page.component';
+import { PagegridComponent } from './RND/pagegrid/pagegrid.component'
 
 const routes: Routes = [
-  {path: '', redirectTo: '/one-page', pathMatch: 'full'},
+  {path: '', redirectTo: '/ui-inventory-page', pathMatch: 'full'},
   {path: 'pagernd', component: PagerndComponent},
-  {path: 'one-page', component: OnePageComponent},
+  {path: 'pagegrid', component: PagegridComponent},
+  {path: 'ui-inventory-page', component: UiInventoryPageComponent},
   {path: 'charts-page', component: ChartsPageComponent},
 ];
 

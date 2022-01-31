@@ -16,7 +16,7 @@ import { TexticonLinkComponent } from './components/buttonItems/texticon-link/te
 import { CardTooltipComponent } from './components/tooltipItems/card-tooltip/card-tooltip.component';
 import { TitleTooltipComponent } from './components/tooltipItems/title-tooltip/title-tooltip.component';
 import { CarditemTooltipComponent } from './components/tooltipItems/carditem-tooltip/carditem-tooltip.component';
-import { PagerndComponent } from './containers/pagernd/pagernd.component';
+import { PagerndComponent } from './RND/pagernd/pagernd.component';
 import { ItemColorsComponent } from './components/item-colors/item-colors.component';
 import { ItemTypographyComponent } from './components/item-typography/item-typography.component';
 import { ItemIconsComponent } from './components/item-icons/item-icons.component';
@@ -27,6 +27,8 @@ import { ItemTablesComponent } from './components/item-tables/item-tables.compon
 import { ChartsPageComponent } from './containers/charts-page/charts-page.component';
 import { OnePageComponent } from './containers/one-page/one-page.component';
 import { ItemBarchartComponent } from './components/item-barchart/item-barchart.component';
+import { UiInventoryPageComponent } from './containers/ui-inventory-page/ui-inventory-page.component';
+import { PagegridComponent } from './RND/pagegrid/pagegrid.component';
 
 @NgModule({
   declarations: [
@@ -55,6 +57,8 @@ import { ItemBarchartComponent } from './components/item-barchart/item-barchart.
     ChartsPageComponent,
     OnePageComponent,
     ItemBarchartComponent,
+    UiInventoryPageComponent,
+    PagegridComponent,
   ],
   imports: [
     BrowserModule,
