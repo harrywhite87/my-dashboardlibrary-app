@@ -1,0 +1,914 @@
+.eye-confy {
+    background-color: #333;
+}
+.eye-confy-child {
+    background-color: rgb(2, 2, 2);
+}
+//ROW1
+.ROW1-flexbox-container {
+    display: flex;
+    justify-content: flex-start; //this is the default value === left
+    border: 1px solid rgb(117, 117, 117);
+}
+.ROW1-flexbox-row {
+    width: 200px;
+    margin: 10px;
+    border: 3px solid #333;
+    background-color: #dfdfdf;
+}
+.ROW1-flexbox-row-1 {
+    min-height: 200px;
+}
+.ROW1-flexbox-row-2 {
+    min-height: 200px;
+}
+.ROW1-flexbox-row-3 {
+    min-height: 200px;
+}
+//ROW2
+.ROW2-flexbox-container {
+    display: flex;    
+    justify-content: center; //will center the columns
+    border: 1px solid rgb(117, 117, 117);
+}
+.ROW2-flexbox-row {
+    width: 200px;
+    margin: 10px;
+    border: 3px solid #333;
+    background-color: #dfdfdf;
+}
+.ROW2-flexbox-row-1 {
+    min-height: 200px;
+}
+.ROW2-flexbox-row-2 {
+    min-height: 200px;
+}
+.ROW2-flexbox-row-3 {
+    min-height: 200px;
+}
+//ROW20
+.ROW20-flexbox-container {
+    display: flex;    
+    justify-content: flex-end; //will center the columns === right
+    border: 1px solid rgb(117, 117, 117);
+}
+.ROW20-flexbox-row {
+    width: 200px;
+    margin: 10px;
+    border: 3px solid #333;
+    background-color: #dfdfdf;
+}
+.ROW20-flexbox-row-1 {
+    min-height: 200px;
+}
+.ROW20-flexbox-row-2 {
+    min-height: 200px;
+}
+.ROW20-flexbox-row-3 {
+    min-height: 200px;
+}
+//ROW3
+.ROW3-flexbox-container {
+    display: flex;    
+    justify-content: space-between;
+    border: 1px solid rgb(117, 117, 117);
+}
+.ROW3-flexbox-row {
+    width: 200px;
+    margin: 10px;
+    border: 3px solid #333;
+    background-color: #dfdfdf;
+}
+.ROW3-flexbox-row-1 {
+    min-height: 200px;
+}
+.ROW3-flexbox-row-2 {
+    min-height: 200px;
+}
+.ROW3-flexbox-row-3 {
+    min-height: 200px;
+}
+//ROW4
+.ROW4-flexbox-container {
+    display: flex;    
+    justify-content: space-evenly;
+    border: 1px solid rgb(117, 117, 117);
+}
+.ROW4-flexbox-row {
+    width: 200px;
+    margin: 10px;
+    border: 3px solid #333;
+    background-color: #dfdfdf;
+}
+.ROW4-flexbox-row-1 {
+    min-height: 200px;
+}
+.ROW4-flexbox-row-2 {
+    min-height: 200px;
+}
+.ROW4-flexbox-row-3 {
+    min-height: 200px;
+}
+//ROW5
+.ROW5-flexbox-container {
+    display: flex;    
+    justify-content: space-around;
+    border: 1px solid rgb(117, 117, 117);
+}
+.ROW5-flexbox-row {
+    width: 200px;
+    margin: 10px;
+    border: 3px solid #333;
+    background-color: #dfdfdf;
+}
+.ROW5-flexbox-row-1 {
+    min-height: 200px;
+}
+.ROW5-flexbox-row-2 {
+    min-height: 200px;
+}
+.ROW5-flexbox-row-3 {
+    min-height: 200px;
+}
+//ROW6
+.ROW6-flexbox-container {
+    display: flex;    
+    justify-content: space-around;    
+    align-items: stretch;
+    border: 1px solid rgb(117, 117, 117);
+}
+.ROW6-flexbox-row {
+    width: 200px;
+    margin: 10px;
+    border: 3px solid #333;
+    background-color: #dfdfdf;
+}
+.ROW6-flexbox-row-1 {
+    min-height: 100px;
+}
+.ROW6-flexbox-row-2 {
+    min-height: 200px;
+}
+.ROW6-flexbox-row-3 {
+    min-height: 300px;
+}
+//ROW7
+.ROW7-flexbox-container {
+    display: flex;    
+    justify-content: space-around;    
+    align-items: flex-start;
+    border: 1px solid rgb(117, 117, 117);
+}
+.ROW7-flexbox-row {
+    width: 200px;
+    margin: 10px;
+    border: 3px solid #333;
+    background-color: #dfdfdf;
+}
+.ROW7-flexbox-row-1 {
+    min-height: 100px;
+}
+.ROW7-flexbox-row-2 {
+    min-height: 200px;
+}
+.ROW7-flexbox-row-3 {
+    min-height: 300px;
+}
+//ROW8
+.ROW8-flexbox-container {
+    display: flex;    
+    justify-content: space-around;    
+    align-items: flex-end;
+    border: 1px solid rgb(117, 117, 117);
+}
+.ROW8-flexbox-row {
+    width: 200px;
+    margin: 10px;
+    border: 3px solid #333;
+    background-color: #dfdfdf;
+}
+.ROW8-flexbox-row-1 {
+    min-height: 100px;
+}
+.ROW8-flexbox-row-2 {
+    min-height: 200px;
+}
+.ROW8-flexbox-row-3 {
+    min-height: 300px;
+}
+//ROW9
+.ROW9-flexbox-container {
+    display: flex;    
+    justify-content: space-around;    
+    align-items: center;
+    border: 1px solid rgb(117, 117, 117);
+}
+.ROW9-flexbox-row {
+    width: 200px;
+    margin: 10px;
+    border: 3px solid #333;
+    background-color: #dfdfdf;
+}
+.ROW9-flexbox-row-1 {
+    min-height: 100px;
+}
+.ROW9-flexbox-row-2 {
+    min-height: 200px;
+}
+.ROW9-flexbox-row-3 {
+    min-height: 300px;
+}
+//ROW10
+.ROW10-flexbox-container {
+    height: 1000px;
+    display: flex;   
+    flex-wrap: wrap; 
+    justify-content: space-around;    
+    align-items: center;
+    align-content: center;
+    border: 1px solid rgb(117, 117, 117);
+}
+.ROW10-flexbox-row {
+    width: 200px;
+    margin: 10px;
+    border: 3px solid #333;
+    background-color: #dfdfdf;
+}
+.ROW10-flexbox-row-1 {
+    min-height: 100px;
+}
+.ROW10-flexbox-row-2 {
+    min-height: 200px;
+}
+.ROW10-flexbox-row-3 {
+    min-height: 300px;
+}
+.ROW10-flexbox-row-4 {
+    min-height: 400px;
+}
+//ROW11
+.ROW11-flexbox-container {
+    height: 1000px;
+    display: flex;   
+    flex-wrap: wrap; 
+    justify-content: space-around;    
+    align-items: center;
+    align-content: flex-start;
+    border: 1px solid rgb(117, 117, 117);
+}
+.ROW11-flexbox-row {
+    width: 200px;
+    margin: 10px;
+    border: 3px solid #333;
+    background-color: #dfdfdf;
+}
+.ROW11-flexbox-row-1 {
+    min-height: 100px;
+}
+.ROW11-flexbox-row-2 {
+    min-height: 200px;
+}
+.ROW11-flexbox-row-3 {
+    min-height: 300px;
+}
+.ROW11-flexbox-row-4 {
+    min-height: 400px;
+}
+//ROW12
+.ROW12-flexbox-container {
+    height: 1000px;
+    display: flex;   
+    flex-wrap: wrap; 
+    justify-content: space-around;    
+    align-items: center;
+    align-content: flex-end;
+    border: 1px solid rgb(117, 117, 117);
+}
+.ROW12-flexbox-row {
+    width: 200px;
+    margin: 10px;
+    border: 3px solid #333;
+    background-color: #dfdfdf;
+}
+.ROW12-flexbox-row-1 {
+    min-height: 100px;
+}
+.ROW12-flexbox-row-2 {
+    min-height: 200px;
+}
+.ROW12-flexbox-row-3 {
+    min-height: 300px;
+}
+.ROW12-flexbox-row-4 {
+    min-height: 400px;
+}
+//ROW13
+.ROW13-flexbox-container {
+    height: 1000px;
+    display: flex;   
+    flex-wrap: wrap; 
+    justify-content: space-around;    
+    align-items: flex-end;
+    align-content: space-between;
+    border: 1px solid rgb(117, 117, 117);
+}
+.ROW13-flexbox-row {
+    width: 200px;
+    margin: 10px;
+    border: 3px solid #333;
+    background-color: #dfdfdf;
+}
+.ROW13-flexbox-row-1 {
+    min-height: 100px;
+}
+.ROW13-flexbox-row-2 {
+    min-height: 200px;
+}
+.ROW13-flexbox-row-3 {
+    min-height: 300px;
+}
+.ROW13-flexbox-row-4 {
+    min-height: 400px;
+}
+//ROW14
+.ROW14-flexbox-container {
+    height: 1000px;
+    display: flex;   
+    flex-wrap: wrap; 
+    justify-content: space-around;    
+    align-items: center;
+    align-content: space-around;
+    border: 1px solid rgb(117, 117, 117);
+}
+.ROW14-flexbox-row {
+    width: 200px;
+    margin: 10px;
+    border: 3px solid #333;
+    background-color: #dfdfdf;
+}
+.ROW14-flexbox-row-1 {
+    min-height: 100px;
+}
+.ROW14-flexbox-row-2 {
+    min-height: 200px;
+}
+.ROW14-flexbox-row-3 {
+    min-height: 300px;
+}
+.ROW14-flexbox-row-4 {
+    min-height: 400px;
+}
+//ROW15
+.ROW15-flexbox-container {
+    height: 500px;
+    display: flex;
+    border: 1px solid rgb(117, 117, 117);
+}
+.ROW15-flexbox-row {
+    width: 200px;
+    margin: 10px;
+    border: 3px solid #333;
+    background-color: #dfdfdf;
+}
+.ROW15-flexbox-row-1 {
+    min-height: 100px;
+}
+.ROW15-flexbox-row-2 {
+    min-height: 200px;
+}
+.ROW15-flexbox-row-3 {
+    min-height: 300px;
+}
+.ROW15-flexbox-row-4 {
+    min-height: 400px;
+}
+//ROW16
+.ROW16-flexbox-container {
+    height: 1500px;
+    display: flex;   
+    flex-direction: column;
+    border: 1px solid rgb(117, 117, 117);
+}
+.ROW16-flexbox-row {
+    width: 200px;
+    margin: 10px;
+    border: 3px solid #333;
+    background-color: #dfdfdf;
+}
+.ROW16-flexbox-row-1 {
+    min-height: 100px;
+}
+.ROW16-flexbox-row-2 {
+    min-height: 200px;
+}
+.ROW16-flexbox-row-3 {
+    min-height: 300px;
+}
+.ROW16-flexbox-row-4 {
+    min-height: 400px;
+}
+//ROW17
+.ROW17-flexbox-container {
+    height: 1500px;
+    display: flex;   
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid rgb(117, 117, 117);
+}
+.ROW17-flexbox-row {
+    width: 200px;
+    margin: 10px;
+    border: 3px solid #333;
+    background-color: #dfdfdf;
+}
+.ROW17-flexbox-row-1 {
+    min-height: 100px;
+}
+.ROW17-flexbox-row-2 {
+    min-height: 200px;
+}
+.ROW17-flexbox-row-3 {
+    min-height: 300px;
+}
+.ROW17-flexbox-row-4 {
+    min-height: 400px;
+}
+//ROW18
+.ROW18-flexbox-container {
+    height: 1500px;
+    display: flex;   
+    flex-direction: column;
+    justify-content: flex-end; //makes horizontally center
+    border: 1px solid rgb(117, 117, 117);
+}
+.ROW18-flexbox-row {
+    width: 200px;
+    margin: 10px;
+    border: 3px solid #333;
+    background-color: #dfdfdf;
+}
+.ROW18-flexbox-row-1 {
+    min-height: 100px;
+}
+.ROW18-flexbox-row-2 {
+    min-height: 200px;
+}
+.ROW18-flexbox-row-3 {
+    min-height: 300px;
+}
+.ROW18-flexbox-row-4 {
+    min-height: 400px;
+}
+//ROW19
+.ROW19-flexbox-container {
+    height: 1500px;
+    display: flex;   
+    flex-direction: column;
+    justify-content: center; //makes horizontally center
+    align-items: center; //makes vertically center
+    border: 1px solid rgb(117, 117, 117);
+}
+.ROW19-flexbox-row {
+    width: 200px;
+    margin: 10px;
+    border: 3px solid #333;
+    background-color: #dfdfdf;
+}
+.ROW19-flexbox-row-1 {
+    min-height: 100px;
+}
+.ROW19-flexbox-row-2 {
+    min-height: 200px;
+}
+.ROW19-flexbox-row-3 {
+    min-height: 300px;
+}
+.ROW19-flexbox-row-4 {
+    min-height: 400px;
+}
+//ROW21
+.ROW21-flexbox-container {
+    height: 1500px;
+    display: flex;   
+    flex-direction: column;
+    justify-content: flex-start; //makes horizontally center
+    align-items: center; //makes vertically center
+    border: 1px solid rgb(117, 117, 117);
+}
+.ROW21-flexbox-row {
+    width: 200px;
+    margin: 10px;
+    border: 3px solid #333;
+    background-color: #dfdfdf;
+}
+.ROW21-flexbox-row-1 {
+    min-height: 100px;
+}
+.ROW21-flexbox-row-2 {
+    min-height: 200px;
+}
+.ROW21-flexbox-row-3 {
+    min-height: 300px;
+}
+.ROW21-flexbox-row-4 {
+    min-height: 400px;
+}
+//ROW22
+.ROW22-flexbox-container {
+    height: 1500px;
+    display: flex;   
+    flex-direction: column;
+    justify-content: flex-end; //makes horizontally center
+    align-items: center; //makes vertically center
+    border: 1px solid rgb(117, 117, 117);
+}
+.ROW22-flexbox-row {
+    width: 200px;
+    margin: 10px;
+    border: 3px solid #333;
+    background-color: #dfdfdf;
+}
+.ROW22-flexbox-row-1 {
+    min-height: 100px;
+}
+.ROW22-flexbox-row-2 {
+    min-height: 200px;
+}
+.ROW22-flexbox-row-3 {
+    min-height: 300px;
+}
+.ROW22-flexbox-row-4 {
+    min-height: 400px;
+}
+//ROW23
+.ROW23-flexbox-container {
+    height: 1500px;
+    display: flex;   
+    flex-direction: column;
+    justify-content: center; //makes horizontally center
+    align-items: flex-end; //makes vertically center
+    border: 1px solid rgb(117, 117, 117);
+}
+.ROW23-flexbox-row {
+    width: 200px;
+    margin: 10px;
+    border: 3px solid #333;
+    background-color: #dfdfdf;
+}
+.ROW23-flexbox-row-1 {
+    min-height: 100px;
+}
+.ROW23-flexbox-row-2 {
+    min-height: 200px;
+}
+.ROW23-flexbox-row-3 {
+    min-height: 300px;
+}
+.ROW23-flexbox-row-4 {
+    min-height: 400px;
+}
+//ROW24
+.ROW24-flexbox-container {
+    height: 1500px;
+    display: flex;   
+    flex-direction: column;
+    justify-content: flex-start; //makes horizontally center
+    align-items: flex-end; //makes vertically center
+    border: 1px solid rgb(117, 117, 117);
+}
+.ROW24-flexbox-row {
+    width: 200px;
+    margin: 10px;
+    border: 3px solid #333;
+    background-color: #dfdfdf;
+}
+.ROW24-flexbox-row-1 {
+    min-height: 100px;
+}
+.ROW24-flexbox-row-2 {
+    min-height: 200px;
+}
+.ROW24-flexbox-row-3 {
+    min-height: 300px;
+}
+.ROW24-flexbox-row-4 {
+    min-height: 400px;
+}
+//ROW25
+.ROW25-flexbox-container {
+    height: 1500px;
+    display: flex;   
+    flex-direction: column;
+    justify-content: flex-end; //makes horizontally center
+    align-items: flex-end; //makes vertically center
+    border: 1px solid rgb(117, 117, 117);
+}
+.ROW25-flexbox-row {
+    width: 200px;
+    margin: 10px;
+    border: 3px solid #333;
+    background-color: #dfdfdf;
+}
+.ROW25-flexbox-row-1 {
+    min-height: 100px;
+}
+.ROW25-flexbox-row-2 {
+    min-height: 200px;
+}
+.ROW25-flexbox-row-3 {
+    min-height: 300px;
+}
+.ROW25-flexbox-row-4 {
+    min-height: 400px;
+}
+//ROW26
+.ROW26-flexbox-container {
+    height: 500px;
+    display: flex;
+    border: 1px solid rgb(117, 117, 117);
+}
+.ROW26-flexbox-row {
+    width: 200px;
+    margin: 10px;
+    border: 3px solid #333;
+    background-color: #dfdfdf;
+}
+.ROW26-flexbox-row-1 {
+    min-height: 100px;
+}
+.ROW26-flexbox-row-2 {
+    min-height: 200px;
+    flex-shrink: 0;
+}
+.ROW26-flexbox-row-3 {
+    min-height: 300px;
+}
+.ROW26-flexbox-row-4 {
+    min-height: 400px;
+}
+//ROW27
+.ROW27-flexbox-container {
+    height: 500px;
+    display: flex;
+    border: 1px solid rgb(117, 117, 117);
+}
+.ROW27-flexbox-row {
+    width: 200px;
+    margin: 10px;
+    border: 3px solid #333;
+    background-color: #dfdfdf;
+}
+.ROW27-flexbox-row-1 {
+    min-height: 100px;
+}
+.ROW27-flexbox-row-2 {
+    min-height: 200px;
+    flex-grow: 1;
+}
+.ROW27-flexbox-row-3 {
+    min-height: 300px;
+}
+.ROW27-flexbox-row-4 {
+    min-height: 400px;
+}
+//ROW28
+.ROW28-flexbox-container {
+    height: 500px;
+    display: flex;
+    border: 1px solid rgb(117, 117, 117);
+}
+.ROW28-flexbox-row {
+    width: 200px;
+    margin: 10px;
+    border: 3px solid #333;
+    background-color: #dfdfdf;
+}
+.ROW28-flexbox-row-1 {
+    min-height: 100px;
+}
+.ROW28-flexbox-row-2 {
+    min-height: 200px;
+    flex-grow: 1;
+}
+.ROW28-flexbox-row-3 {
+    min-height: 300px;
+    flex-grow: 1;
+}
+.ROW28-flexbox-row-4 {
+    min-height: 400px;
+}
+//ROW29
+.ROW29-flexbox-container {
+    height: 500px;
+    display: flex;
+    border: 1px solid rgb(117, 117, 117);
+}
+.ROW29-flexbox-row {
+    width: 200px;
+    margin: 10px;
+    border: 3px solid #333;
+    background-color: #dfdfdf;
+}
+.ROW29-flexbox-row-1 {
+    min-height: 100px;
+}
+.ROW29-flexbox-row-2 {
+    min-height: 200px;
+    flex-grow: 1;
+}
+.ROW29-flexbox-row-3 {
+    min-height: 300px;
+    flex-grow: 2;
+}
+.ROW29-flexbox-row-4 {
+    min-height: 400px;
+}
+//ROW30
+.ROW30-flexbox-container {
+    height: 500px;
+    display: flex;
+    border: 1px solid rgb(117, 117, 117);
+}
+.ROW30-flexbox-row {
+    width: 200px;
+    margin: 10px;
+    border: 3px solid #333;
+    background-color: #dfdfdf;
+}
+.ROW30-flexbox-row-1 {
+    min-height: 100px;
+}
+.ROW30-flexbox-row-2 {
+    min-height: 200px;
+    flex-grow: 1;
+    flex-basis: 0; // this will make the size of element exactly the flex-grow value represent, means element having flex-grow = 2 is twice size than element having flex-grow value = 1
+}
+.ROW30-flexbox-row-3 {
+    min-height: 300px;
+    flex-grow: 2;
+    flex-basis: 0; // this will make the size of element exactly the flex-grow value represent, means element having flex-grow = 2 is twice size than element having flex-grow value = 1
+}
+.ROW30-flexbox-row-4 {
+    min-height: 400px;
+}
+//ROW31
+.ROW31-flexbox-container {
+    height: 500px;
+    display: flex;
+    border: 1px solid rgb(117, 117, 117);
+}
+.ROW31-flexbox-row {
+    width: 200px;
+    margin: 10px;
+    border: 3px solid #333;
+    background-color: #dfdfdf;
+}
+.ROW31-flexbox-row-1 {
+    min-height: 100px;
+}
+.ROW31-flexbox-row-2 {
+    min-height: 200px;
+    flex-grow: 1;
+    flex-basis: 0; // this will make the size of element exactly the flex-grow value represent, means element having flex-grow = 2 is twice size than element having flex-grow value = 1
+    align-self: center;
+}
+.ROW31-flexbox-row-3 {
+    min-height: 300px;
+    flex-grow: 2;
+    flex-basis: 0; // this will make the size of element exactly the flex-grow value represent, means element having flex-grow = 2 is twice size than element having flex-grow value = 1
+}
+.ROW31-flexbox-row-4 {
+    min-height: 400px;
+}
+//ROW32
+.ROW32-flexbox-container {
+    height: 500px;
+    display: flex;
+    border: 1px solid rgb(117, 117, 117);
+}
+.ROW32-flexbox-row {
+    width: 200px;
+    margin: 10px;
+    border: 3px solid #333;
+    background-color: #dfdfdf;
+}
+.ROW32-flexbox-row-1 {
+    min-height: 100px;
+    align-self: flex-end;
+}
+.ROW32-flexbox-row-2 {
+    min-height: 200px;
+    flex-grow: 1;
+    flex-basis: 0; // this will make the size of element exactly the flex-grow value represent, means element having flex-grow = 2 is twice size than element having flex-grow value = 1
+    align-self: center;
+}
+.ROW32-flexbox-row-3 {
+    min-height: 300px;
+    flex-grow: 2;
+    flex-basis: 0; // this will make the size of element exactly the flex-grow value represent, means element having flex-grow = 2 is twice size than element having flex-grow value = 1
+}
+.ROW32-flexbox-row-4 {
+    min-height: 400px;
+}
+//ROW33
+.ROW33-flexbox-container {
+    height: 500px;
+    display: flex;
+    border: 1px solid rgb(117, 117, 117);
+}
+.ROW33-flexbox-row {
+    width: 200px;
+    margin: 10px;
+    border: 3px solid #333;
+    background-color: #dfdfdf;
+}
+.ROW33-flexbox-row-1 {
+    min-height: 100px;
+    align-self: flex-end;
+}
+.ROW33-flexbox-row-2 {
+    min-height: 200px;
+    flex-grow: 1;
+    flex-basis: 0; // this will make the size of element exactly the flex-grow value represent, means element having flex-grow = 2 is twice size than element having flex-grow value = 1
+    align-self: center;
+}
+.ROW33-flexbox-row-3 {
+    min-height: 300px;
+    flex-grow: 2;
+    flex-basis: 0; // this will make the size of element exactly the flex-grow value represent, means element having flex-grow = 2 is twice size than element having flex-grow value = 1
+}
+.ROW33-flexbox-row-4 {
+    min-height: 400px;
+    align-self: flex-start;
+}
+//ROW34
+.ROW34-flexbox-container {
+    height: 500px;
+    display: flex;
+    border: 1px solid rgb(117, 117, 117);
+}
+.ROW34-flexbox-row {
+    width: 200px;
+    margin: 10px;
+    border: 3px solid #333;
+    background-color: #dfdfdf;
+}
+.ROW34-flexbox-row-1 {
+    min-height: 100px;
+    align-self: flex-end;
+    order: 3;
+}
+.ROW34-flexbox-row-2 {
+    min-height: 200px;
+    flex-grow: 1;
+    flex-basis: 0; // this will make the size of element exactly the flex-grow value represent, means element having flex-grow = 2 is twice size than element having flex-grow value = 1
+    align-self: center;
+    order: 4;
+}
+.ROW34-flexbox-row-3 {
+    min-height: 300px;
+    flex-grow: 2;
+    flex-basis: 0; // this will make the size of element exactly the flex-grow value represent, means element having flex-grow = 2 is twice size than element having flex-grow value = 1
+    order: 1;
+}
+.ROW34-flexbox-row-4 {
+    min-height: 400px;
+    align-self: flex-start;
+    order: 2;
+}
+//ROW35
+.ROW35-flexbox-container {
+    height: 500px;
+    display: flex;
+    border: 1px solid rgb(117, 117, 117);
+}
+.ROW35-flexbox-row {
+    width: 200px;
+    margin: 10px;
+    border: 3px solid #333;
+    background-color: #dfdfdf;
+}
+.ROW35-flexbox-row-1 {
+    min-height: 100px;
+    flex: 1 0 0px;//1st: flex-grow, 2nd: flex-shrink, 3rd: flex-basis
+    align-self: flex-end;
+    order: 3;
+}
+.ROW35-flexbox-row-2 {
+    min-height: 200px;
+    flex-grow: 1;
+    flex-basis: 0; // this will make the size of element exactly the flex-grow value represent, means element having flex-grow = 2 is twice size than element having flex-grow value = 1
+    align-self: center;
+    order: 4;
+}
+.ROW35-flexbox-row-3 {
+    min-height: 300px;
+    flex-grow: 2;
+    flex-basis: 0; // this will make the size of element exactly the flex-grow value represent, means element having flex-grow = 2 is twice size than element having flex-grow value = 1
+    order: 1;
+}
+.ROW35-flexbox-row-4 {
+    min-height: 400px;
+    align-self: flex-start;
+    order: 2;
+}
