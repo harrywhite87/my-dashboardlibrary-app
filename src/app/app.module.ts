@@ -29,6 +29,7 @@ import { OnePageComponent } from './containers/one-page/one-page.component';
 import { ItemBarchartComponent } from './components/item-barchart/item-barchart.component';
 import { UiInventoryPageComponent } from './containers/ui-inventory-page/ui-inventory-page.component';
 import { PagegridComponent } from './RND/pagegrid/pagegrid.component';
+import { ItemPiechartComponent } from './components/item-piechart/item-piechart.component';
 
 @NgModule({
   declarations: [
@@ -59,6 +60,7 @@ import { PagegridComponent } from './RND/pagegrid/pagegrid.component';
     ItemBarchartComponent,
     UiInventoryPageComponent,
     PagegridComponent,
+    ItemPiechartComponent,
   ],
   imports: [
     BrowserModule,
