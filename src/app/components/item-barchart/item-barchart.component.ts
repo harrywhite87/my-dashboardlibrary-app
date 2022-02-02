@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { StatsBarChart } from '../../../data/data';
+import { StatsBarChart } from '../../../data/expense_data';
 
 import * as d3 from 'd3-selection';
 import * as d3Scale from 'd3-scale';
@@ -14,7 +14,7 @@ import * as d3Axis from 'd3-axis';
 })
 export class ItemBarchartComponent implements OnInit {
   currentRate = 8;
-  title = 'D3 Barchart with Angular 10';
+  title = 'D3 Barchart with Angular 13';
   width: number;
   height: number;
   margin = { top: 20, right: 20, bottom: 30, left: 40 };

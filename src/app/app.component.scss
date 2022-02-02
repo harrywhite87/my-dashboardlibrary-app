@@ -1,9 +1,13 @@
+.container {
+    background-color: #F4F7FC;
+}
+
 @media (min-width: 768px) {
     .container {
         margin-top: 88px
     }
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .container {
         margin-top: 265px
     }

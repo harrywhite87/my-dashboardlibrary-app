@@ -11,8 +11,64 @@
 .ROW12-6-1-flexbox-row-1 {
 }
 
-@media (max-width: 992px) {
-    img, svg {
-        width: 90%;
+#barChart {
+    height: auto;
+}
+
+.space-btwn {
+    margin: 20px;
+}
+
+.text1 {
+    margin-top: auto; 
+    margin-bottom: auto; 
+    color: #7e84a3;
+    font-size: 1rem;
+}
+
+.icon1 {
+    width: 10px;   
+    top: -0.05em; 
+    position: relative;
+}
+
+@media (max-width: 768px) {
+    .space-btwn {
+        margin: 5px;
+    }  
+    .text1 {
+        font-size: 0.7rem;
+    }
+    .icon1 {
+        width: 8px;
+        top: -0.3em; 
+        position: relative;
     }
 }
+@media (min-width: 768px) {
+    #barChart {
+        height: 250px;
+        // width: 50%;
+    }    
+}
+@media (min-width: 991px) {
+    #barChart {
+        height: 350px;
+    }
+}
+@media (min-width: 1199px) {
+    #barChart {
+        height: 400px;
+    }
+}
+@media (min-width: 1399px) {
+    #barChart {
+        height: 450px;
+    }
+}
+
+// @media (max-width: 767px) {
+//     #barChart {
+//         width: 38%;
+//     }
+// }
