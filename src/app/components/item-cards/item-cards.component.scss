@@ -115,7 +115,7 @@ h4 {
 //ROW12-3
 .ROW12-3-flexbox-container {
     display: flex;    
-    justify-content: flex-start; //will center the columns
+    justify-content: flex-start; //center columns
 }
 .ROW12-3-flexbox-row {
     width: 40px;
@@ -135,8 +135,8 @@ h4 {
 .ROW12-4-flexbox-container {
     display: flex;   
     flex-direction: column;
-    justify-content: center; //makes horizontally center
-    align-items: center; //makes vertically center
+    justify-content: center; //center horizontally
+    align-items: center; //center vertically 
 }
 .ROW12-4-flexbox-row {
     width: 5px;
@@ -168,14 +168,14 @@ h4 {
 }
 .ROW12-4-1-flexbox-container {
     display: flex;    
-    justify-content: flex-start; //will center the columns
+    justify-content: flex-start; //center columns
 }
 //ROW12-5
 .ROW12-5-flexbox-container {
     display: flex;   
     flex-direction: column;
-    justify-content: flex-end; //makes horizontally center
-    align-items: center; //makes vertically center
+    justify-content: flex-end; //center horizontally 
+    align-items: center; //center vertically 
 }
 .ROW12-5-flexbox-row {
     margin-bottom: 4px;
@@ -217,8 +217,8 @@ h4 {
 .ROW12-6-flexbox-container {
     display: flex;   
     flex-direction: column;
-    justify-content: flex-start; //makes horizontally center
-    align-items: flex-start; //makes vertically center
+    justify-content: flex-start; //center horizontally 
+    align-items: flex-start; //center vertically 
 }
 .ROW12-6-flexbox-row {
 }

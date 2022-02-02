@@ -16,13 +16,6 @@ import * as d3Shape from 'd3-shape';
   styleUrls: ['./item-piechart.component.scss']
 })
 export class ItemPiechartComponent implements OnInit {
-  // private data = [
-  //   {"Framework": "Vue", "Stars": "166443", "Released": "2014"},
-  //   {"Framework": "React", "Stars": "150793", "Released": "2013"},
-  //   {"Framework": "Angular", "Stars": "62342", "Released": "2016"},
-  //   {"Framework": "Backbone", "Stars": "27647", "Released": "2010"},
-  //   {"Framework": "Ember", "Stars": "21471", "Released": "2011"},
-  // ];
 
   texticonlinkText : string = "More Insights";
   title = 'D3 Piechart with Angular 13';

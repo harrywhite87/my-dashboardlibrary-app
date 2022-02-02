@@ -7,7 +7,7 @@ import { UiInventoryPageComponent } from './containers/ui-inventory-page/ui-inve
 import { PagegridComponent } from './RND/pagegrid/pagegrid.component'
 
 const routes: Routes = [
-  {path: '', redirectTo: '/ui-inventory-page', pathMatch: 'full'},
+  {path: '', redirectTo: '/charts-page', pathMatch: 'full'},
   {path: 'pagernd', component: PagerndComponent},
   {path: 'pagegrid', component: PagegridComponent},
   {path: 'ui-inventory-page', component: UiInventoryPageComponent},
