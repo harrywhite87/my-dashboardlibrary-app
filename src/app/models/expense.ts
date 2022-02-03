@@ -1,5 +1,6 @@
 export interface Expense {
     month: string;
-    value: number;
+    incomeValue: number;
+    expenseValue: number;
     // value: number[];
 }

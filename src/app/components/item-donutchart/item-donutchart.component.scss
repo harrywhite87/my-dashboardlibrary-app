@@ -1,26 +1,60 @@
-//ROW12-6-1
-.ROW12-6-1-flexbox-container-d {
-    display: flex;   
+// //ROW12-6-1
+// .ROW12-6-1-flexbox-container-d {
+//     display: flex;   
+// }
+// .ROW12-6-1-flexbox-row-d {
+//     margin-right: 15px;
+// }
+// .ROW12-6-1-flexbox-row-3-d {
+//     margin-left: auto;
+//     color: #131523;
+//     font-weight: 700;
+// }
+// .icon1-d {
+//     width: 10px;   
+//     top: -0.05em; 
+//     position: relative;
+// }
+// .text1-d {
+//     margin-top: auto; 
+//     margin-bottom: auto; 
+//     color: #242633;
+//     font-size: 1rem;
+//     font-weight: 500;
+// }
+
+//== using grid
+//grid1
+.grid1 {
+    display: grid;
+    // grid-template-columns: 70% 30%;
 }
-.ROW12-6-1-flexbox-row-d {
-    margin-right: 15px;
+
+.grid1 > div {
+    // background: #eee;
+    // padding: 1em;
 }
-.ROW12-6-1-flexbox-row-3-d {
-    margin-left: auto;
-    color: #131523;
-    font-weight: 700;
+
+.grid1 > div:nth-child(odd) {
+    // background: #ddd;
+}
+
+//grid2
+.grid2 {
+    display: grid;
+    grid-template-columns: 10% 60% 30%;
+}
+.grid2 > div {
+    // background: #eee;
+    padding: 0.1em 0em 0.1em 0.1em;
+}
+.grid2 > div:nth-child(odd) {
+    // background: #ddd;
 }
 .icon1-d {
     width: 10px;   
     top: -0.05em; 
     position: relative;
-}
-.text1-d {
-    margin-top: auto; 
-    margin-bottom: auto; 
-    color: #242633;
-    font-size: 1rem;
-    font-weight: 500;
 }
 
 // //============
@@ -70,3 +104,55 @@
 //     font-size: 16px;
 //     line-height: 20px;
 // }
+
+
+//===========tooltip div styles goes below
+#tooltipDonut {
+    position: absolute;
+    width: 132px;
+    height: auto;
+    padding: 5px;
+    background-color: white;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    -webkit-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+    pointer-events: none;
+   }
+#tooltipDonut.hidden {
+    display: none;
+   }
+#tooltipDonut {
+    margin: 0;
+    font-family: sans-serif;
+    font-size: 1.1em;
+    // line-height: 20px;
+}
+p {
+    margin: 0 5px 0 0;
+    font-family: sans-serif;
+    font-size: 1.07em;
+}
+//tt
+.tt-flx-container {
+    display: flex;
+    justify-content: flex-start;
+}
+.tt-flx-rw-1-1-1 {
+    font-size: 12px;
+    margin-left: 7px;
+    font-weight: bold;
+}
+.tt-flx-rw-1-1-2 {
+    font-size: 12px;
+    margin-left: auto;
+    color: #7e84a3;
+}
+.title-tooltip {
+    font-size: 1em;
+    margin-top: 5px;
+    margin-left: 7px;
+    font-weight: bold;
+}

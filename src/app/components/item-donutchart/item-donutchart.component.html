@@ -1,4 +1,4 @@
-<div class="ROW12-6-1-flexbox-container-d ">
+<!-- <div class="ROW12-6-1-flexbox-container-d ">
     <div id="donutChart"></div>
 </div>
 <div class="ROW12-6-1-flexbox-container-d mt-1">
@@ -48,6 +48,64 @@
 <hr>
 <div class="ROW12-6-1-flexbox-container-d mt-1">
     <div class="ROW9-flexbox-row-4-2-d mb-2" ><app-texticon-link [item]="texticonlinkText"></app-texticon-link></div>
+</div> -->
+
+<div class="grid1">
+    <div>
+        <div id="donutChart"></div>
+    </div>
+    <div>
+        <div class="grid2">
+            <div>
+                <svg class="icon1-d" style="fill: #0058ff;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48z"/></svg>
+            </div>
+            <div>
+                <p class="text1-d" >Electronics</p>
+            </div>
+            <div style="margin-left: auto;">
+                <p >50%</p>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="grid2">
+            <div>
+                <svg class="icon1-d" style="fill: #21d59b;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48z"/></svg>
+            </div>
+            <div>
+                <p class="text1-d" >Furniture</p>
+            </div>
+            <div style="margin-left: auto;">
+                <p >25%</p>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="grid2">
+            <div>
+                <svg class="icon1-d" style="fill: #ffc700;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48z"/></svg>
+            </div>
+            <div>
+                <p class="text1-d" >Bags & Packages</p>
+            </div>
+            <div style="margin-left: auto;">
+                <p >15%</p>
+            </div>
+        </div>
+    </div>
+    <div style="">
+        <div class="grid2">
+            <div >
+                <svg class="icon1-d" style="fill: #f99600;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48z"/></svg>
+            </div>
+            <div>
+                <p class="text1-d" >Accessories</p>
+            </div>
+            <div style="margin-left: auto;">
+                <p >10%</p>
+            </div>
+        </div>
+    </div>
 </div>
 
 <!-- hidden div for tooltip -->
@@ -55,3 +113,17 @@
     <p><strong>Important Label Heading</strong></p>
     <p><span id="value">100</span>%</p>
 </div> -->
+
+<div id="tooltipDonut" class="hidden">
+    <div class="tt-flx-rw-1-1-1 title-tooltip">
+        <span id="salesProduct">product</span>
+    </div>
+    <div class="tt-flx-container mt-1">
+        <div class="tt-flx-rw-1-1-1">
+            <svg style="width: 10px; fill: #0062ff; top: -0.15em; position: relative;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z"/></svg>
+        </div>
+        <div class="tt-flx-rw-1-1-1">
+            <p><span id="salesValue" class="mb-0">0</span></p>
+        </div>
+    </div>
+</div>

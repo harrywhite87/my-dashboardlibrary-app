@@ -100,7 +100,7 @@
 }
 
 //===========tooltip div styles goes below
-#tooltip {
+#tooltipBar {
     position: absolute;
     width: 132px;
     height: auto;
@@ -114,10 +114,10 @@
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
     pointer-events: none;
    }
-#tooltip.hidden {
+#tooltipBar.hidden {
     display: none;
    }
-#tooltip {
+#tooltipBar {
     margin: 0;
     font-family: sans-serif;
     font-size: 1.1em;

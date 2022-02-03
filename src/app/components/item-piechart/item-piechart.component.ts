@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { StatsPieChart } from '../../../data/sale_data';
+import { StatsPieChart } from '../../../data/product_sale_data';
 
 import * as d3 from 'd3-selection';
 import * as d3Scale from 'd3-scale';
@@ -78,6 +78,20 @@ export class ItemPiechartComponent implements OnInit {
         .outerRadius(this.radius)
       )
       .attr('fill', (d:any, i:any) => (this.colors(i)))
+      // .on("mouseover", this.handleMouseOver)
+      // .on("mouseover", function(d, i) {
+      //   console.log(d);
+      //   svg.append("text")
+      //     .attr("dy", ".5em")
+      //     .style("text-anchor", "middle")
+      //     .style("font-size", 45)
+      //     .attr("class","label")
+      //     .style("fill", function(d,i){return "black";})
+      //     .text(names[i]);        
+      // })
+      // .on("mouseout", function(d) {
+      //   svg.select(".label").remove();
+      // });
       // .attr("stroke", "#121926")
       // .style("stroke-width", "1px");
 
@@ -95,5 +109,9 @@ export class ItemPiechartComponent implements OnInit {
     // .attr("transform", (d:any) => "translate(" + labelLocation.centroid(d) + ")")
     // .style("text-anchor", "middle")
     // .style("font-size", 15);    
+  }
+
+  handleMouseOver(){
+    console.log("pie pie")
   }
 }

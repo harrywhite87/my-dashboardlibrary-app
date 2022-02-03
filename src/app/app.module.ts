@@ -39,6 +39,7 @@ import { ItemTotalsaleschartComponent } from './components/item-totalsaleschart/
 import { ItemUniquepurchaseschartComponent } from './components/item-uniquepurchaseschart/item-uniquepurchaseschart.component';
 import { ItemOrderquantitychartComponent } from './components/item-orderquantitychart/item-orderquantitychart.component';
 import { ItemAvgordervaluechartComponent } from './components/item-avgordervaluechart/item-avgordervaluechart.component';
+import { ItemResponsivepiechartComponent } from './RND/item-responsivepiechart/item-responsivepiechart.component';
 
 @NgModule({
   declarations: [
@@ -79,6 +80,7 @@ import { ItemAvgordervaluechartComponent } from './components/item-avgordervalue
     ItemUniquepurchaseschartComponent,
     ItemOrderquantitychartComponent,
     ItemAvgordervaluechartComponent,
+    ItemResponsivepiechartComponent,
   ],
   imports: [
     BrowserModule,

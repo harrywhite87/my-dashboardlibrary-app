@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { StatsBarChart } from '../../../data/expense_data';
+import { StatsBarChart } from '../../../data/income_expense_data';
 
 import * as d3 from 'd3-selection';
 import * as d3Scale from 'd3-scale';
@@ -68,7 +68,8 @@ export class ItemBarchartComponent implements OnInit {
     this.x = d3Scale.scaleBand().rangeRound([0, this.width]).padding(0.1);
     this.y = d3Scale.scaleLinear().rangeRound([this.height, 0]);
     this.x.domain(StatsBarChart.map((d) => d.month));
-    this.y.domain([0, d3Array.max(StatsBarChart, (d) => d.value)]);
+    // this.y.domain([0, d3Array.max(StatsBarChart, (d) => d.incomeValue)]);
+    this.y.domain([0, d3Array.max(StatsBarChart, (d) => d.incomeValue)]);
   }
 
   drawAxis() {
@@ -108,22 +109,29 @@ export class ItemBarchartComponent implements OnInit {
       .enter().append('rect')
       .attr('class', 'bar')
       .attr('x', (d : any) => this.x(d.month))
-      .attr('y', (d : any) => this.y(d.value))
+      .attr('y', (d : any) => this.y(d.incomeValue))
       .attr('width', this.x.bandwidth())
       .attr('fill', '#498bfc')
-      .attr('height', (d : any) => this.height - this.y(d.value))
+      .attr('height', (d : any) => this.height - this.y(d.incomeValue))
       .on("mouseover", this.handleMouseOver)
-      .on("mouseout", this.handleMouseOut);
+      .on("mouseout", this.handleMouseOut)
         
   }
 
   handleMouseOver(d:any, i:any) {  // Add interactivity
-    d3.select("#tooltip").classed("hidden", false);
-    d3.select("#tooltip")
+    d3.select("#tooltipBar")
+      .classed("hidden", false)
       .style("left", d.x-65 + "px")
-      .style("top", d.y+450 + "px")
+      .style("top", d.y+400 + "px")
       .select("#incomeValue")
-      .text("$"+i.value/1000+"k");
+      .text("$"+i.incomeValue/1000+"k")
+      // .attr("fill", "orange");
+
+    d3.select("#tooltipBar")
+      .classed("hidden", false)
+      .select("#expenseValue")
+      .text("$"+i.expenseValue/1000+"k")
+
     console.log(d);
     // console.log(d.x);
     // console.log(d.y);
@@ -131,7 +139,7 @@ export class ItemBarchartComponent implements OnInit {
   }
 
   handleMouseOut(d:any, i:any) {
-    d3.select("#tooltip").classed("hidden", true);
+    d3.select("#tooltipBar").classed("hidden", true);
     console.log("mouse out");
   }
 }

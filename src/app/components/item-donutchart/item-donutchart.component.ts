@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { StatsPieChart } from '../../../data/sale_data';
+import { StatsPieChart } from '../../../data/product_sale_data';
 
 import * as d3 from 'd3-selection';
 import * as d3Scale from 'd3-scale';
@@ -34,8 +34,11 @@ export class ItemDonutchartComponent implements OnInit {
   private createSvg(): void {
     this.svg = d3.select("div#donutChart")
     .append("svg")
-    .style("width", this.width + 'px')
-    .style("height", this.height + 'px')
+    .attr('width', '100%')
+    .attr('height', '100%')
+    .attr('viewBox', '75 0 300 300')
+    // .style("width", this.width + 'px')
+    // .style("height", this.height + 'px')
     // .attr("width", this.width)
     // .attr("height", this.height)
     .append("g")
@@ -65,6 +68,8 @@ export class ItemDonutchartComponent implements OnInit {
         .outerRadius(this.radius)
       )
       .attr('fill', (d:any, i:any) => (this.colors(i)))
+      .on("mouseover", this.handleMouseOver)
+      .on("mouseout", this.handleMouseOut)
       // .attr("stroke", "#121926")
       // .style("stroke-width", "1px");
 
@@ -82,5 +87,29 @@ export class ItemDonutchartComponent implements OnInit {
     // .attr("transform", (d:any) => "translate(" + labelLocation.centroid(d) + ")")
     // .style("text-anchor", "middle")
     // .style("font-size", 15);    
+  }
+
+  handleMouseOver(d:any, i:any) {  // Add interactivity
+    d3.select("#tooltipDonut")
+      .classed("hidden", false)
+      .style("left", d.x-50 + "px")
+      .style("top", d.y+400 + "px")
+      // .attr("fill", "orange")
+      .select("#salesProduct")
+      .text(i.data.product);
+
+    d3.select("#tooltipDonut")
+      .classed("hidden", false)  
+      .select("#salesValue")
+      .text(i.data.value+"%")
+    console.log(i.data.product);
+    // console.log(d.x);
+    // console.log(d.y);
+    console.log("mouse over");
+  }
+
+  handleMouseOut(d:any, i:any) {
+    d3.select("#tooltipDonut").classed("hidden", true);
+    console.log("mouse out");
   }
 }
