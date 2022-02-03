@@ -5,24 +5,13 @@ import { StatsPieChart } from '../../../data/sale_data';
 import * as d3 from 'd3-selection';
 import * as d3Scale from 'd3-scale';
 import * as d3Shape from 'd3-shape';
-// import * as d3Shape from 'd3-shape';
-// import * as d3Shape from 'd3';
-// import * as d3Array from 'd3-array';
-// import * as d3Axis from 'd3-axis';
 
 @Component({
-  selector: 'app-item-piechart',
-  templateUrl: './item-piechart.component.html',
-  styleUrls: ['./item-piechart.component.scss']
+  selector: 'app-item-donutchart',
+  templateUrl: './item-donutchart.component.html',
+  styleUrls: ['./item-donutchart.component.scss']
 })
-export class ItemPiechartComponent implements OnInit {
-  // private data = [
-  //   {"Framework": "Vue", "Stars": "166443", "Released": "2014"},
-  //   {"Framework": "React", "Stars": "150793", "Released": "2013"},
-  //   {"Framework": "Angular", "Stars": "62342", "Released": "2016"},
-  //   {"Framework": "Backbone", "Stars": "27647", "Released": "2010"},
-  //   {"Framework": "Ember", "Stars": "21471", "Released": "2011"},
-  // ];
+export class ItemDonutchartComponent implements OnInit {
 
   texticonlinkText : string = "More Insights";
   title = 'D3 Piechart with Angular 13';
@@ -34,18 +23,16 @@ export class ItemPiechartComponent implements OnInit {
   radius = Math.min(this.width, this.height) / 2 - this.margin;
   colors:any; 
 
-  constructor() {
-    
-  }
+  constructor() { }
 
   ngOnInit(): void {
     this.createSvg();
     this.createColors();
     this.drawChart();
-  }
+  }  
 
   private createSvg(): void {
-    this.svg = d3.select("div#pieChart")
+    this.svg = d3.select("div#donutChart")
     .append("svg")
     .style("width", this.width + 'px')
     .style("height", this.height + 'px')
@@ -74,7 +61,7 @@ export class ItemPiechartComponent implements OnInit {
       .enter()
       .append('path')
       .attr('d', d3Shape.arc()
-        .innerRadius(0)
+        .innerRadius(120)
         .outerRadius(this.radius)
       )
       .attr('fill', (d:any, i:any) => (this.colors(i)))

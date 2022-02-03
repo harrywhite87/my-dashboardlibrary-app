@@ -23,6 +23,17 @@
     padding: 7px 5px 10px 18px;
     border: 1px solid #d7dbec;
     border-radius: 3px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.ROW12-6-1-flexbox-row-3 {
+    color: #7e84a3;
+    fill: #7e84a3;
+}
+.ROW12-6-1-flexbox-row-3:hover {
+    color: #0058FF;
+    fill: #0058FF;
 }
 
 .space-btwn {
@@ -55,7 +66,7 @@
         position: relative;
     }
     .ROW12-6-1-flexbox-row-3 {
-        display: flex; 
+        // display: flex; 
         width: 55px;
         height: 20px;
         padding: 1px 1px 2px 3px;
@@ -67,7 +78,10 @@
     #barChart {
         height: 250px;
         // width: 50%;
-    }    
+    }
+    .space-btwn {
+        margin: 5px;
+    }
 }
 @media (min-width: 991px) {
     #barChart {

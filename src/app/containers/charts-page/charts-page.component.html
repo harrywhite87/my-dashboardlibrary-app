@@ -1,11 +1,12 @@
 <div class="Container">
     <hr>
     <div class="grid1">
-        <div class="grid5-1">
+        <!-- <div class="grid1-1">
             <div class="h5-regular">
                 Avg. Order Value
             </div>
-            <!-- <div class="ROW12-1-flexbox-row ROW12-1-flexbox-row-2">
+
+            <div class="ROW12-1-flexbox-row ROW12-1-flexbox-row-2">
                 <div class="ROW12-2-flexbox-row ROW12-2-flexbox-row-1-1">                        
                     <div class="ROW12-0-flexbox-container mt-1">
                         <div class="ROW12-0-flexbox-row ROW12-0-flexbox-row-1">                               
@@ -28,28 +29,37 @@
                         </div>
                     </div>                                             
                 </div>
-            </div> -->
-        </div>        
-        <div class="h5-regular">
-            Order Quantity
+            </div>
+        </div>         -->
+        <div class="grid1-1">
+            <div class="h5-regular">Avg. Order Value</div>
+            <app-item-avgordervaluechart></app-item-avgordervaluechart>
         </div>
-        <div class="h5-regular">
-            Unique Purchases
+        <div class="grid1-1">
+            <div class="h5-regular">Order Quantity</div>
+            <app-item-orderquantitychart></app-item-orderquantitychart>
+        </div>
+        <div class="grid1-1">
+            <div class="h5-regular">Unique Purchases</div>
+            <app-item-uniquepurchaseschart></app-item-uniquepurchaseschart>
         </div>
     </div>
     <!-- <hr> -->
     <div class="grid2">
-        <div class="h5-bold">
-            Total Sales
+        <div class="grid2-1">
+            <div class="h5-bold">Total Sales</div>
+            <app-item-totalsaleschart></app-item-totalsaleschart>
         </div>
     </div>
     <!-- <hr> -->
-    <div class="grid3">
-        <div class="h5-bold">
-            Sales By Country
+    <div class="grid3">        
+        <div class="grid3-1">
+            <div class="h5-bold">Sales By Country</div>
+            <app-item-salesbycountrychart></app-item-salesbycountrychart>
         </div>
-        <div class="h5-bold">
-            Visitors this year
+        <div class="grid3-1">
+            <div class="h5-bold">Visitors this year</div>
+            <app-item-yearvisitorschart></app-item-yearvisitorschart>
         </div>
     </div>
     <div class="grid5">
@@ -59,7 +69,7 @@
         </div>
         <div class="grid5-1">
             <div class="h5-bold">Sales Breakdown by Product</div>
-            <app-item-piechart></app-item-piechart>
+            <app-item-donutchart></app-item-donutchart>
         </div>
     </div>
 </div>

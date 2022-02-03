@@ -33,7 +33,15 @@ export class ItemBarchartComponent implements OnInit {
     this.initAxis();
     this.drawAxis();
     this.drawBars();
+    // this.showTooltips();
   }
+
+  // showTooltips() {
+  //   svg.selectAll("rect")
+  //     .data(dataset)
+  //     .enter()
+  //     .append("rect")
+  // }
 
   initSvg() {
     this.svg = d3.select('#barChart')
@@ -78,7 +86,8 @@ export class ItemBarchartComponent implements OnInit {
       .attr('y', (d : any) => this.y(d.value))
       .attr('width', this.x.bandwidth())
       .attr('fill', '#498bfc')
-      .attr('height', (d : any) => this.height - this.y(d.value));
+      .attr('height', (d : any) => this.height - this.y(d.value))
+      .append("title")
+      .text((d:any) => d.value)
   }
-
 }

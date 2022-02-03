@@ -30,6 +30,15 @@ import { ItemBarchartComponent } from './components/item-barchart/item-barchart.
 import { UiInventoryPageComponent } from './containers/ui-inventory-page/ui-inventory-page.component';
 import { PagegridComponent } from './RND/pagegrid/pagegrid.component';
 import { ItemPiechartComponent } from './components/item-piechart/item-piechart.component';
+import { ItemDonutchartComponent } from './components/item-donutchart/item-donutchart.component';
+import { ItemGroupedbarchartComponent } from './components/item-groupedbarchart/item-groupedbarchart.component';
+import { RndCharttooltipComponent } from './RND/rnd-charttooltip/rnd-charttooltip.component';
+import { ItemYearvisitorschartComponent } from './components/item-yearvisitorschart/item-yearvisitorschart.component';
+import { ItemSalesbycountrychartComponent } from './components/item-salesbycountrychart/item-salesbycountrychart.component';
+import { ItemTotalsaleschartComponent } from './components/item-totalsaleschart/item-totalsaleschart.component';
+import { ItemUniquepurchaseschartComponent } from './components/item-uniquepurchaseschart/item-uniquepurchaseschart.component';
+import { ItemOrderquantitychartComponent } from './components/item-orderquantitychart/item-orderquantitychart.component';
+import { ItemAvgordervaluechartComponent } from './components/item-avgordervaluechart/item-avgordervaluechart.component';
 
 @NgModule({
   declarations: [
@@ -61,6 +70,15 @@ import { ItemPiechartComponent } from './components/item-piechart/item-piechart.
     UiInventoryPageComponent,
     PagegridComponent,
     ItemPiechartComponent,
+    ItemDonutchartComponent,
+    ItemGroupedbarchartComponent,
+    RndCharttooltipComponent,
+    ItemYearvisitorschartComponent,
+    ItemSalesbycountrychartComponent,
+    ItemTotalsaleschartComponent,
+    ItemUniquepurchaseschartComponent,
+    ItemOrderquantitychartComponent,
+    ItemAvgordervaluechartComponent,
   ],
   imports: [
     BrowserModule,
