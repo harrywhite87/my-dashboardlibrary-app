@@ -22,10 +22,21 @@ export class ItemBarchartComponent implements OnInit {
   y: any;
   svg: any;
   g: any;
+  h: any;
+  xPosition: any;
+  yPosition: any;
+
+  dynamicColor: any;
+
+  xScale: any = d3Scale.scaleOrdinal()
+
 
   constructor() { 
     this.width = 900 - this.margin.left - this.margin.right;
     this.height = 500 - this.margin.top - this.margin.bottom;
+
+    // this.xPosition = 0;
+    // this.yPosition = 0;
   }
 
   ngOnInit(): void {
@@ -77,6 +88,20 @@ export class ItemBarchartComponent implements OnInit {
       .text('value');
   }
 
+  // drawBars() {
+  //   this.g.selectAll('.bar')
+  //     .data(StatsBarChart)
+  //     .enter().append('rect')
+  //     .attr('class', 'bar')
+  //     .attr('x', (d : any) => this.x(d.month))
+  //     .attr('y', (d : any) => this.y(d.value))
+  //     .attr('width', this.x.bandwidth())
+  //     .attr('fill', '#498bfc')
+  //     .attr('height', (d : any) => this.height - this.y(d.value))
+  //     .append("title")
+  //     .text((d:any) => d.value)
+  // }
+
   drawBars() {
     this.g.selectAll('.bar')
       .data(StatsBarChart)
@@ -87,7 +112,26 @@ export class ItemBarchartComponent implements OnInit {
       .attr('width', this.x.bandwidth())
       .attr('fill', '#498bfc')
       .attr('height', (d : any) => this.height - this.y(d.value))
-      .append("title")
-      .text((d:any) => d.value)
+      .on("mouseover", this.handleMouseOver)
+      .on("mouseout", this.handleMouseOut);
+        
+  }
+
+  handleMouseOver(d:any, i:any) {  // Add interactivity
+    d3.select("#tooltip").classed("hidden", false);
+    d3.select("#tooltip")
+      .style("left", d.x-65 + "px")
+      .style("top", d.y+450 + "px")
+      .select("#incomeValue")
+      .text("$"+i.value/1000+"k");
+    console.log(d);
+    // console.log(d.x);
+    // console.log(d.y);
+    console.log("mouse over");
+  }
+
+  handleMouseOut(d:any, i:any) {
+    d3.select("#tooltip").classed("hidden", true);
+    console.log("mouse out");
   }
 }
