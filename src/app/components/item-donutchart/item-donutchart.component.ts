@@ -37,10 +37,6 @@ export class ItemDonutchartComponent implements OnInit {
     .attr('width', '100%')
     .attr('height', '100%')
     .attr('viewBox', '75 0 300 300')
-    // .style("width", this.width + 'px')
-    // .style("height", this.height + 'px')
-    // .attr("width", this.width)
-    // .attr("height", this.height)
     .append("g")
     .attr(
       "transform",
@@ -93,7 +89,7 @@ export class ItemDonutchartComponent implements OnInit {
     d3.select("#tooltipDonut")
       .classed("hidden", false)
       .style("left", d.x-50 + "px")
-      .style("top", d.y+400 + "px")
+      .style("top", d.y+700 + "px")
       // .attr("fill", "orange")
       .select("#salesProduct")
       .text(i.data.product);
@@ -102,14 +98,9 @@ export class ItemDonutchartComponent implements OnInit {
       .classed("hidden", false)  
       .select("#salesValue")
       .text(i.data.value+"%")
-    console.log(i.data.product);
-    // console.log(d.x);
-    // console.log(d.y);
-    console.log("mouse over");
   }
 
   handleMouseOut(d:any, i:any) {
     d3.select("#tooltipDonut").classed("hidden", true);
-    console.log("mouse out");
   }
 }

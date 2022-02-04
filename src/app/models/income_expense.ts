@@ -1,4 +1,4 @@
-export interface Expense {
+export interface IncomeExpense {
     month: string;
     incomeValue: number;
     expenseValue: number;

@@ -1,6 +1,6 @@
-import { Sale } from "src/app/models/sale";
+import { ProductSale } from "src/app/models/product_sale";
 
-export const StatsPieChart: Sale[] = [
+export const StatsPieChart: ProductSale[] = [
     {product: 'Bags & Packages', value: 5},
     {product: 'Furniture', value: 15},
     {product: 'Electronics', value: 60},

@@ -23,8 +23,8 @@ export class ItemBarchartComponent implements OnInit {
   svg: any;
   g: any;
   h: any;
-  xPosition: any;
-  yPosition: any;
+  // xPosition: any;
+  // yPosition: any;
 
   dynamicColor: any;
 
@@ -34,9 +34,6 @@ export class ItemBarchartComponent implements OnInit {
   constructor() { 
     this.width = 900 - this.margin.left - this.margin.right;
     this.height = 500 - this.margin.top - this.margin.bottom;
-
-    // this.xPosition = 0;
-    // this.yPosition = 0;
   }
 
   ngOnInit(): void {
@@ -44,15 +41,7 @@ export class ItemBarchartComponent implements OnInit {
     this.initAxis();
     this.drawAxis();
     this.drawBars();
-    // this.showTooltips();
   }
-
-  // showTooltips() {
-  //   svg.selectAll("rect")
-  //     .data(dataset)
-  //     .enter()
-  //     .append("rect")
-  // }
 
   initSvg() {
     this.svg = d3.select('#barChart')
@@ -68,7 +57,6 @@ export class ItemBarchartComponent implements OnInit {
     this.x = d3Scale.scaleBand().rangeRound([0, this.width]).padding(0.1);
     this.y = d3Scale.scaleLinear().rangeRound([this.height, 0]);
     this.x.domain(StatsBarChart.map((d) => d.month));
-    // this.y.domain([0, d3Array.max(StatsBarChart, (d) => d.incomeValue)]);
     this.y.domain([0, d3Array.max(StatsBarChart, (d) => d.incomeValue)]);
   }
 
@@ -89,20 +77,6 @@ export class ItemBarchartComponent implements OnInit {
       .text('value');
   }
 
-  // drawBars() {
-  //   this.g.selectAll('.bar')
-  //     .data(StatsBarChart)
-  //     .enter().append('rect')
-  //     .attr('class', 'bar')
-  //     .attr('x', (d : any) => this.x(d.month))
-  //     .attr('y', (d : any) => this.y(d.value))
-  //     .attr('width', this.x.bandwidth())
-  //     .attr('fill', '#498bfc')
-  //     .attr('height', (d : any) => this.height - this.y(d.value))
-  //     .append("title")
-  //     .text((d:any) => d.value)
-  // }
-
   drawBars() {
     this.g.selectAll('.bar')
       .data(StatsBarChart)
@@ -122,7 +96,7 @@ export class ItemBarchartComponent implements OnInit {
     d3.select("#tooltipBar")
       .classed("hidden", false)
       .style("left", d.x-65 + "px")
-      .style("top", d.y+400 + "px")
+      .style("top", d.y+700 + "px")
       .select("#incomeValue")
       .text("$"+i.incomeValue/1000+"k")
       // .attr("fill", "orange");
@@ -131,15 +105,9 @@ export class ItemBarchartComponent implements OnInit {
       .classed("hidden", false)
       .select("#expenseValue")
       .text("$"+i.expenseValue/1000+"k")
-
-    console.log(d);
-    // console.log(d.x);
-    // console.log(d.y);
-    console.log("mouse over");
   }
 
   handleMouseOut(d:any, i:any) {
     d3.select("#tooltipBar").classed("hidden", true);
-    console.log("mouse out");
   }
 }

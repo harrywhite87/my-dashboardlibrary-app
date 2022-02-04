@@ -1,6 +1,6 @@
-import { Expense } from "src/app/models/expense";
+import { IncomeExpense } from "src/app/models/income_expense";
 
-export const StatsBarChart: Expense[] = [
+export const StatsBarChart: IncomeExpense[] = [
     {month: 'Jan20', incomeValue: 38000, expenseValue: 13000},
     {month: 'Feb20', incomeValue: 40000, expenseValue: 31000},
     {month: 'Mar20', incomeValue: 59000, expenseValue: 44000},
