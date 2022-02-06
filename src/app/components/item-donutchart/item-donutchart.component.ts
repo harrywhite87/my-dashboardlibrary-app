@@ -61,6 +61,7 @@ export class ItemDonutchartComponent implements OnInit {
     // Build the pie chart
     this.svg.selectAll('pieces')
       .data(pie(StatsPieChart))
+      .style("position", "absolute")
       .enter()
       .append('path')
       .attr('d', d3Shape.arc()
@@ -69,14 +70,16 @@ export class ItemDonutchartComponent implements OnInit {
       )
       .attr('fill', (d:any, i:any) => (this.colors(i)))
       .on("mouseover", this.handleMouseOver)
+      .on("mousemove", this.handleMouseMove)
       .on("mouseout", this.handleMouseOut)
       // .attr("stroke", "#121926")
       // .style("stroke-width", "1px");
 
     // Add labels
-    const labelLocation = d3Shape.arc()
-    .innerRadius(100)
-    .outerRadius(this.radius);
+    const labelLocation = d3Shape
+      .arc()
+      .innerRadius(100)
+      .outerRadius(this.radius);
 
     // this.svg
     // .selectAll('pieces')
@@ -91,25 +94,38 @@ export class ItemDonutchartComponent implements OnInit {
 
   handleMouseOver(d:any, i:any) {  // Add interactivity
     d3.select("#tooltipDonut")
-      .classed("hidden", false)
-      .style("left", d.x-50 + "px")
-      .style("top", d.y+400 + "px")
+      // .classed("hidden", false);
+      // .style("left", d.x-50 + "px")
+      // .style("top", d.y+400 + "px")
       // .attr("fill", "orange")
       .select("#salesProduct")
       .text(i.data.product);
 
     d3.select("#tooltipDonut")
-      .classed("hidden", false)  
+      // .classed("hidden", false)  
       .select("#salesValue")
-      .text(i.data.value+"%")
-    console.log(i.data.product);
+      .text(i.data.value+"%");
+    // console.log(i.data.product);
     // console.log(d.x);
     // console.log(d.y);
-    console.log("mouse over");
+    // console.log("mouse over");
+  }
+
+  handleMouseMove(d:any, i:any) {
+    // console.log(d)
+    d3.select("#tooltipDonut")
+      .classed("hidden", false)      
+      .style("top", (d.pageY-10)+"px").style("left",(d.pageX+10)+"px");
+      // .style("left", d.x-50 + "px")
+      // .style("top", d.y+400 + "px")
+      // .attr("fill", "orange")
+      // .select("#salesProduct")
+      // .text(i.data.product);
   }
 
   handleMouseOut(d:any, i:any) {
-    d3.select("#tooltipDonut").classed("hidden", true);
-    console.log("mouse out");
+    d3.select("#tooltipDonut")
+      .classed("hidden", true);
+    // console.log("mouse out");
   }
 }

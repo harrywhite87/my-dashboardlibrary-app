@@ -88,26 +88,40 @@ export class ItemBarchartComponent implements OnInit {
       .attr('fill', '#498bfc')
       .attr('height', (d : any) => this.height - this.y(d.incomeValue))
       .on("mouseover", this.handleMouseOver)
+      .on("mousemove", this.handleMouseMove)
       .on("mouseout", this.handleMouseOut)
         
   }
 
   handleMouseOver(d:any, i:any) {  // Add interactivity
     d3.select("#tooltipBar")
-      .classed("hidden", false)
-      .style("left", d.x-65 + "px")
-      .style("top", d.y+700 + "px")
+      // .classed("hidden", false)
+      // .style("left", d.x-65 + "px")
+      // .style("top", d.y+700 + "px")
       .select("#incomeValue")
       .text("$"+i.incomeValue/1000+"k")
       // .attr("fill", "orange");
 
     d3.select("#tooltipBar")
-      .classed("hidden", false)
+      // .classed("hidden", false)
       .select("#expenseValue")
       .text("$"+i.expenseValue/1000+"k")
   }
 
+  handleMouseMove(d:any, i:any) {
+    // console.log(d)
+    d3.select("#tooltipBar")
+      .classed("hidden", false)      
+      .style("top", (d.pageY-10)+"px").style("left",(d.pageX+10)+"px");
+      // .style("left", d.x-50 + "px")
+      // .style("top", d.y+400 + "px")
+      // .attr("fill", "orange")
+      // .select("#salesProduct")
+      // .text(i.data.product);
+  }
+
   handleMouseOut(d:any, i:any) {
-    d3.select("#tooltipBar").classed("hidden", true);
+    d3.select("#tooltipBar")
+      .classed("hidden", true);
   }
 }

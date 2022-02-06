@@ -11,19 +11,19 @@
 }
 
 .downloadfile-icon {
-    fill: #7e84a3;
+    fill: #E3E5EC;
     width: 15px;
     margin-right: 5px;
 }
 
-.downloadfile-icon svg:hover path {
+.downloadfile-icon:hover path {
     fill: #fce57e;
 }
 
-p {
+.btn-text {
     margin: 0px;
     padding-left: 5px;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 //

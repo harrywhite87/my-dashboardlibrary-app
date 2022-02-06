@@ -40,7 +40,7 @@ import { ItemUniquepurchaseschartComponent } from './components/item-uniquepurch
 import { ItemOrderquantitychartComponent } from './components/item-orderquantitychart/item-orderquantitychart.component';
 import { ItemAvgordervaluechartComponent } from './components/item-avgordervaluechart/item-avgordervaluechart.component';
 import { ItemResponsivepiechartComponent } from './RND/item-responsivepiechart/item-responsivepiechart.component';
-import { UiDesignComponent } from './containers/ui-design/ui-design.component';
+import { UiDesignComponent } from './RND/ui-design/ui-design.component';
 import { UiInElTitleComponent } from './components/ui-in-el-title/ui-in-el-title.component';
 import { UiInElTextdivComponent } from './components/ui-in-el-textdiv/ui-in-el-textdiv.component';
 import { UiInElColorboxhashrgbComponent } from './components/ui-in-el-colorboxhashrgb/ui-in-el-colorboxhashrgb.component';
@@ -49,6 +49,7 @@ import { UiInElCardsComponent } from './components/ui-in-el-cards/ui-in-el-cards
 import { UiInElGraphbarsComponent } from './components/ui-in-el-graphbars/ui-in-el-graphbars.component';
 import { UiInElLegendComponent } from './components/ui-in-el-legend/ui-in-el-legend.component';
 import { UiInElCustomersComponent } from './components/ui-in-el-customers/ui-in-el-customers.component';
+import { RndElGridnavComponent } from './RND/rnd-el-gridnav/rnd-el-gridnav.component';
 
 @NgModule({
   declarations: [
@@ -99,6 +100,7 @@ import { UiInElCustomersComponent } from './components/ui-in-el-customers/ui-in-
     UiInElGraphbarsComponent,
     UiInElLegendComponent,
     UiInElCustomersComponent,
+    RndElGridnavComponent,
   ],
   imports: [
     BrowserModule,
