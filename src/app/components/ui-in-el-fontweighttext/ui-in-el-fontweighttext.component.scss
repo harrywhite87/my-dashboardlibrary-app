@@ -1,0 +1,21 @@
+$margin_right: 5px;
+$colorbox_height: 120px;
+$hex_font_size: 25px;
+$rgb_font_size: 15px;
+
+.ROW7-flexbox-row {
+    color: #000000;
+    min-width: 100px;
+}
+.ROW7-flexbox-row-1 {
+    flex-grow: 1;
+    flex-basis: 0;
+    margin-right: $margin_right;
+}
+.ROW7-1-flexbox-row-1-2{
+    font-weight: 700;
+}
+.ROW7-2-flexbox-row {
+    font-family: 'Poppins';
+    font-size: 200%;
+}

@@ -40,6 +40,11 @@ import { ItemUniquepurchaseschartComponent } from './components/item-uniquepurch
 import { ItemOrderquantitychartComponent } from './components/item-orderquantitychart/item-orderquantitychart.component';
 import { ItemAvgordervaluechartComponent } from './components/item-avgordervaluechart/item-avgordervaluechart.component';
 import { ItemResponsivepiechartComponent } from './RND/item-responsivepiechart/item-responsivepiechart.component';
+import { UiDesignComponent } from './containers/ui-design/ui-design.component';
+import { UiInElTitleComponent } from './components/ui-in-el-title/ui-in-el-title.component';
+import { UiInElTextdivComponent } from './components/ui-in-el-textdiv/ui-in-el-textdiv.component';
+import { UiInElColorboxhashrgbComponent } from './components/ui-in-el-colorboxhashrgb/ui-in-el-colorboxhashrgb.component';
+import { UiInElFontweighttextComponent } from './components/ui-in-el-fontweighttext/ui-in-el-fontweighttext.component';
 
 @NgModule({
   declarations: [
@@ -81,6 +86,11 @@ import { ItemResponsivepiechartComponent } from './RND/item-responsivepiechart/i
     ItemOrderquantitychartComponent,
     ItemAvgordervaluechartComponent,
     ItemResponsivepiechartComponent,
+    UiDesignComponent,
+    UiInElTitleComponent,
+    UiInElTextdivComponent,
+    UiInElColorboxhashrgbComponent,
+    UiInElFontweighttextComponent,
   ],
   imports: [
     BrowserModule,

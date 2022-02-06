@@ -1,0 +1,18 @@
+//ROW1
+.ROW1-flexbox-container {
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: space-around;    
+    align-items: center;
+    align-content: space-around;
+}
+.ROW1-flexbox-row {
+    width: 200px;
+}
+.ROW1-flexbox-row-2 {
+    flex-grow: 1;
+}
+.titletext {
+    margin: 2em 1em 2em 0em;
+    font-size: 1.5rem;
+}
