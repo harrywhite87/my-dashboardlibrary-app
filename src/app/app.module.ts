@@ -45,6 +45,10 @@ import { UiInElTitleComponent } from './components/ui-in-el-title/ui-in-el-title
 import { UiInElTextdivComponent } from './components/ui-in-el-textdiv/ui-in-el-textdiv.component';
 import { UiInElColorboxhashrgbComponent } from './components/ui-in-el-colorboxhashrgb/ui-in-el-colorboxhashrgb.component';
 import { UiInElFontweighttextComponent } from './components/ui-in-el-fontweighttext/ui-in-el-fontweighttext.component';
+import { UiInElCardsComponent } from './components/ui-in-el-cards/ui-in-el-cards.component';
+import { UiInElGraphbarsComponent } from './components/ui-in-el-graphbars/ui-in-el-graphbars.component';
+import { UiInElLegendComponent } from './components/ui-in-el-legend/ui-in-el-legend.component';
+import { UiInElCustomersComponent } from './components/ui-in-el-customers/ui-in-el-customers.component';
 
 @NgModule({
   declarations: [
@@ -91,6 +95,10 @@ import { UiInElFontweighttextComponent } from './components/ui-in-el-fontweightt
     UiInElTextdivComponent,
     UiInElColorboxhashrgbComponent,
     UiInElFontweighttextComponent,
+    UiInElCardsComponent,
+    UiInElGraphbarsComponent,
+    UiInElLegendComponent,
+    UiInElCustomersComponent,
   ],
   imports: [
     BrowserModule,

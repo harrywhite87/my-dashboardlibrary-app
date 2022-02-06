@@ -1,0 +1,50 @@
+//ROW12-6
+.ROW12-6-flexbox-container {
+    display: flex;   
+    flex-direction: column;
+    justify-content: flex-start; //makes horizontally center
+    align-items: flex-start; //makes vertically center
+}
+.ROW12-6-flexbox-row {
+}
+.ROW12-6-flexbox-row-1 {
+}
+.ROW12-6-flexbox-row-2 {
+    margin-bottom: 20px;
+}
+.ROW12-6-flexbox-row-3 {
+}
+.ROW12-6-flexbox-row-4 {
+}
+//ROW12-6-1
+.ROW12-6-1-flexbox-container {
+    display: flex;   
+}
+.ROW12-6-1-flexbox-row {
+    margin-right: 10px;
+}
+.ROW12-6-1-flexbox-row-1 {
+}
+.ROW12-6-1-flexbox-row-2 {
+    margin-right: 40px;
+}
+//ROW12-7
+.ROW12-7-flexbox-container {
+    display: flex;
+}
+.ROW12-7-flexbox-row {
+}
+.ROW12-7-flexbox-row-1 {
+    margin-right: 15px;
+}
+.ROW12-7-flexbox-row-2 {
+}
+.ROW12-7-flexbox-row-3 {
+    margin-left: 120px;
+}
+.ROW12-7-flexbox-row-1-1 {
+    margin-top: 15px;
+    margin-right: 20px;
+    width: 30px;
+    fill: #7e84a3;
+}
