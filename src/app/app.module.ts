@@ -50,6 +50,10 @@ import { UiInElGraphbarsComponent } from './components/ui-in-el-graphbars/ui-in-
 import { UiInElLegendComponent } from './components/ui-in-el-legend/ui-in-el-legend.component';
 import { UiInElCustomersComponent } from './components/ui-in-el-customers/ui-in-el-customers.component';
 import { RndElGridnavComponent } from './RND/rnd-el-gridnav/rnd-el-gridnav.component';
+import { UiInElTooltipdonutchartComponent } from './components/ui-in-el-tooltipdonutchart/ui-in-el-tooltipdonutchart.component';
+import { UiInElTooltipbarchartComponent } from './components/ui-in-el-tooltipbarchart/ui-in-el-tooltipbarchart.component';
+import { ChElBarchartComponent } from './components/ch-el-barchart/ch-el-barchart.component';
+import { ChElDonutchartComponent } from './components/ch-el-donutchart/ch-el-donutchart.component';
 
 @NgModule({
   declarations: [
@@ -101,6 +105,10 @@ import { RndElGridnavComponent } from './RND/rnd-el-gridnav/rnd-el-gridnav.compo
     UiInElLegendComponent,
     UiInElCustomersComponent,
     RndElGridnavComponent,
+    UiInElTooltipdonutchartComponent,
+    UiInElTooltipbarchartComponent,
+    ChElBarchartComponent,
+    ChElDonutchartComponent,
   ],
   imports: [
     BrowserModule,

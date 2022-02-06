@@ -8,11 +8,11 @@ import * as d3Array from 'd3-array';
 import * as d3Axis from 'd3-axis';
 
 @Component({
-  selector: 'app-item-barchart',
-  templateUrl: './item-barchart.component.html',
-  styleUrls: ['./item-barchart.component.scss']
+  selector: 'app-ch-el-barchart',
+  templateUrl: './ch-el-barchart.component.html',
+  styleUrls: ['./ch-el-barchart.component.scss']
 })
-export class ItemBarchartComponent implements OnInit {
+export class ChElBarchartComponent implements OnInit {
   currentRate = 8;
   title = 'D3 Barchart with Angular 13';
   width: number;
@@ -28,11 +28,10 @@ export class ItemBarchartComponent implements OnInit {
 
   xScale: any = d3Scale.scaleOrdinal()
 
-
-  constructor() { 
+  constructor() {
     this.width = 900 - this.margin.left - this.margin.right;
     this.height = 500 - this.margin.top - this.margin.bottom;
-  }
+   }
 
   ngOnInit(): void {
     this.initSvg();

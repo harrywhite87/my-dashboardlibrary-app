@@ -7,12 +7,11 @@ import * as d3Scale from 'd3-scale';
 import * as d3Shape from 'd3-shape';
 
 @Component({
-  selector: 'app-item-donutchart',
-  templateUrl: './item-donutchart.component.html',
-  styleUrls: ['./item-donutchart.component.scss']
+  selector: 'app-ch-el-donutchart',
+  templateUrl: './ch-el-donutchart.component.html',
+  styleUrls: ['./ch-el-donutchart.component.scss']
 })
-export class ItemDonutchartComponent implements OnInit {
-
+export class ChElDonutchartComponent implements OnInit {
   texticonlinkText : string = "More Insights";
   title = 'D3 Piechart with Angular 13';
   svg:any;
@@ -29,8 +28,8 @@ export class ItemDonutchartComponent implements OnInit {
     this.createSvg();
     this.createColors();
     this.drawChart();
-  }  
-
+  }
+  
   private createSvg(): void {
     this.svg = d3.select("div#donutChart")
     .append("svg")
@@ -62,7 +61,6 @@ export class ItemDonutchartComponent implements OnInit {
     this.svg.selectAll('pieces')
       .data(pie(StatsPieChart))
       .style("position", "absolute")
-      .style("z-index", "10")
       .enter()
       .append('path')
       .attr('d', d3Shape.arc()
@@ -102,4 +100,5 @@ export class ItemDonutchartComponent implements OnInit {
     d3.select("#tooltipDonut")
       .classed("hidden", true);
   }
+
 }
