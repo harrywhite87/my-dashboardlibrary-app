@@ -16,42 +16,46 @@ export class ItemYearvisitorschartComponent implements OnInit {
 
   public data = [
     {
-      "value": 20,
+      "value": 30,
       "date": "2020-05-12T12:19:00+00:00"
     },
     {
-      "value": 50,
+      "value": 35,
       "date": "2020-05-14T12:19:00+00:00"
     },
     {
-      "value": 30,
+      "value": 25,
       "date": "2020-05-16T12:19:00+00:00"
     },
     {
-      "value": 80,
+      "value": 38,
       "date": "2020-05-18T12:19:00+00:00"
     },
     {
-      "value": 55,
+      "value": 45,
       "date": "2020-05-20T12:19:00+00:00"
     },
     {
-      "value": 60,
+      "value": 34,
       "date": "2020-05-22T12:19:00+00:00"
     },
     {
-      "value": 45,
+      "value": 37,
       "date": "2020-05-24T12:19:00+00:00"
     },
     {
-      "value": 30,
+      "value": 15,
       "date": "2020-05-26T12:19:00+00:00"
+    },
+    {
+      "value": 25,
+      "date": "2020-05-28T12:19:00+00:00"
     },
   ];
 
   texticonlinkText : string = "More Insights";
 
-  private width = 100;
+  private width = 250;
   private height = 100;
   private margin = 0;
   public svg: any;
@@ -66,10 +70,10 @@ export class ItemYearvisitorschartComponent implements OnInit {
 
   ngOnInit(): void {
     console.log(this.data)
-      this.initializeChart();
-      this.drawChart();
+    this.initializeChart();
+    this.drawChart();
 
-      window.addEventListener('resize', () => this.drawChart());
+    window.addEventListener('resize', () => this.drawChart());
   }
 
   private initializeChart(): void {
@@ -112,7 +116,7 @@ export class ItemYearvisitorschartComponent implements OnInit {
   }
 
   private drawChart(): void {
-    this.width = this.chartElem.nativeElement.getBoundingClientRect().width;
+    // this.width = this.chartElem.nativeElement.getBoundingClientRect().width;
     this.svg.attr('width', this.width);
 
     this.xScale.range([this.margin, this.width - 2 * this.margin]);
@@ -140,6 +144,4 @@ export class ItemYearvisitorschartComponent implements OnInit {
 
     this.lineGroup.attr('d', line(points));
   }
-
-
 }
