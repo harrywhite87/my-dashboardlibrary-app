@@ -16,190 +16,95 @@ export class ItemYearvisitorschartComponent implements OnInit {
 
   public data = [
     {
-      value: 20,
-      date: "2020-05-12"
+      "value": 20,
+      "date": "2020-05-12T12:19:00+00:00"
     },
     {
-      value: 50,
-      date: "2020-05-14"
+      "value": 50,
+      "date": "2020-05-14T12:19:00+00:00"
     },
     {
-      value: 30,
-      date: "2020-05-16"
+      "value": 30,
+      "date": "2020-05-16T12:19:00+00:00"
     },
     {
-      value: 80,
-      date: "2020-05-18"
+      "value": 80,
+      "date": "2020-05-18T12:19:00+00:00"
     },
     {
-      value: 55,
-      date: "2020-05-20"
+      "value": 55,
+      "date": "2020-05-20T12:19:00+00:00"
     },
     {
-      value: 60,
-      date: "2020-05-22"
+      "value": 60,
+      "date": "2020-05-22T12:19:00+00:00"
     },
     {
-      value: 45,
-      date: "2020-05-24"
+      "value": 45,
+      "date": "2020-05-24T12:19:00+00:00"
     },
     {
-      value: 30,
-      date: "2020-05-26"
+      "value": 30,
+      "date": "2020-05-26T12:19:00+00:00"
     },
-    {
-      value: 40,
-      date: "2020-05-28"
-    },
-    {
-      value: 70,
-      date: "2020-05-30"
-    },
-    {
-      value: 63,
-      date: "2020-06-01"
-    },
-    {
-      value: 40,
-      date: "2020-06-03"
-    },
-    {
-      value: 50,
-      date: "2020-06-05"
-    },
-    {
-      value: 75,
-      date: "2020-06-07"
-    },
-    {
-      value: 20,
-      date: "2020-06-09"
-    },
-    {
-      value: 50,
-      date: "2020-06-11"
-    },
-    {
-      value: 80,
-      date: "2020-06-13"
-    },
-    {
-      value: 75,
-      date: "2020-06-15"
-    },
-    {
-      value: 82,
-      date: "2020-06-17"
-    },
-    {
-      value: 55,
-      date: "2020-06-19"
-    },
-    {
-      value: 35,
-      date: "2020-06-21"
-    },
-    {
-      value: 34,
-      date: "2020-06-23"
-    },
-    {
-      value: 45,
-      date: "2020-06-25"
-    },
-    {
-      value: 58,
-      date: "2020-06-27"
-    },
-    {
-      value: 34,
-      date: "2020-06-29"
-    },
-    {
-      value: 60,
-      date: "2020-07-01"
-    },
-    {
-      value: 75,
-      date: "2020-07-03"
-    },
-    {
-      value: 80,
-      date: "2020-07-05"
-    },
-    {
-      value: 29,
-      date: "2020-07-07"
-    },
-    {
-      value: 40,
-      date: "2020-07-09"
-    },
-    {
-      value: 54,
-      date: "2020-07-11"
-    },
-    {
-      value: 67,
-      date: "2020-07-13"
-    },
-    {
-      value: 90,
-      date: "2020-07-15"
-    },
-    {
-      value: 84,
-      date: "2020-07-17"
-    },
-    {
-      value: 43,
-      date: "2020-07-19"
-    }
   ];
 
   texticonlinkText : string = "More Insights";
 
-  private width = 700;
-  private height = 700;
-  private margin = 50;
-  public svg:any;
-  public svgInner:any;
-  public yScale:any;
-  public xScale:any;
-  public xAxis:any;
-  public yAxis:any;
-  public lineGroup:any;
+  private width = 40;
+  private height = 100;
+  private margin = 0;
+  public svg: any;
+  public svgInner: any;
+  public yScale: any;
+  public xScale: any;
+  public xAxis: any;
+  public yAxis: any;
+  public lineGroup: any;
 
   constructor(public chartElem: ElementRef) { }
 
   ngOnInit(): void {
-    // this.initLineChart();
+    this.initializeChart();
   }
 
-  // initLineChart(){
-  //   this.svg = d3
-  //     .select(this.chartElem.nativeElement)
-  //     .select("div#lineChart")
-  //     .append("svg")
-  //     .attr("height", this.height);
+  private initializeChart(): void {
+    this.svg = d3
+      .select(this.chartElem.nativeElement)
+      .select('div.linechart')
+      .append('svg')
+      .attr('height', this.height)
+      .attr('width', this.width);
+    this.svgInner = this.svg
+      .append('g')
+      .style('transform', 'translate(' + this.margin + 'px, ' + this.margin + 'px)');
 
-  //   this.svgInner = this.svg
-  //     .append("g")
-  //     .style("transform", "translate(" + this.margin + "px, " + this.margin + "px)");
+    this.yScale = d3
+      .scaleLinear()
+      .domain([
+        d3.max(this.data, d => d.value) as number + 1,
+        d3.min(this.data, d => d.value) as number - 1
+      ])
+      .range([0, this.height - 2 * this.margin]);
 
-  //     this.yScale = d3
-  //     .scaleLinear()
-  //     // .domain([d3.max(this.data, d => d.value) + 1, d3.min(this.data, d => d.value) — 1])
-  //     .domain([
-  //       d3.min(this.data, d => d.value) as number - 1 ,  // cast to number
-  //       d3.max(this.data, d => d.value) as number + 1   // cast to number
-  //     ])
-  //     .range([0, this.height - 2 * this.margin]);
-      
-  //   this.xScale = d3.scaleTime().domain(d3.extent(this.data, (d:any) => new Date(d.date))); 
-  //   // this.xScale = d3.scaleTime().domain(d3.extent(this.data, d => new Date(d.date)));
-  //   //.domain([new Date("2012-01-01"), new Date("2013-01-01")])
-  //   //d3.scaleTime().domain(d3.extent(data, d => d.date))
-  // }
+    this.yAxis = this.svgInner
+      .append('g')
+      .attr('id', 'y-axis')
+      .style('transform', 'translate(' + this.margin + 'px,  0)');
 
+    this.xScale = d3.scaleTime().domain(<[Date, Date]>d3.extent(this.data, d => new Date(d.date)));
+
+    this.xAxis = this.svgInner
+      .append('g')
+      .attr('id', 'x-axis')
+      .style('transform', 'translate(0, ' + (this.height - 2 * this.margin) + 'px)');
+
+    this.lineGroup = this.svgInner
+      .append('g')
+      .append('path')
+      .attr('id', 'line')
+      .style('shadow', 'yellow')
+      .style('stroke', 'green')
+      .style('stroke-width', '2px')
+  }  
 }

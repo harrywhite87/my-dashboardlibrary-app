@@ -54,6 +54,8 @@ import { UiInElTooltipdonutchartComponent } from './components/ui-in-el-tooltipd
 import { UiInElTooltipbarchartComponent } from './components/ui-in-el-tooltipbarchart/ui-in-el-tooltipbarchart.component';
 import { ChElBarchartComponent } from './components/ch-el-barchart/ch-el-barchart.component';
 import { ChElDonutchartComponent } from './components/ch-el-donutchart/ch-el-donutchart.component';
+import { UiElTablesComponent } from './components/ui-el-tables/ui-el-tables.component';
+import { ChElLinegraphComponent } from './components/ch-el-linegraph/ch-el-linegraph.component';
 
 @NgModule({
   declarations: [
@@ -109,6 +111,8 @@ import { ChElDonutchartComponent } from './components/ch-el-donutchart/ch-el-don
     UiInElTooltipbarchartComponent,
     ChElBarchartComponent,
     ChElDonutchartComponent,
+    UiElTablesComponent,
+    ChElLinegraphComponent,
   ],
   imports: [
     BrowserModule,

@@ -470,3 +470,16 @@ $grey_text: #7E84A3;
 // .g1-r11 > div:nth-child(odd) {
 //     background: #ddd;
 // }
+
+//g1-r12
+.g1-r12 {
+    display: grid;
+    // grid-template-columns: 5fr 2fr;
+}
+.g1-r12 > div {
+    background: #eee;
+    padding: 1em;
+}
+.g1-r12 > div:nth-child(odd) {
+    background: #ddd;
+}
