@@ -51,7 +51,7 @@ export class ItemYearvisitorschartComponent implements OnInit {
 
   texticonlinkText : string = "More Insights";
 
-  private width = 40;
+  private width = 100;
   private height = 100;
   private margin = 0;
   public svg: any;
@@ -65,7 +65,11 @@ export class ItemYearvisitorschartComponent implements OnInit {
   constructor(public chartElem: ElementRef) { }
 
   ngOnInit(): void {
-    this.initializeChart();
+    console.log(this.data)
+      this.initializeChart();
+      this.drawChart();
+
+      window.addEventListener('resize', () => this.drawChart());
   }
 
   private initializeChart(): void {
@@ -73,8 +77,7 @@ export class ItemYearvisitorschartComponent implements OnInit {
       .select(this.chartElem.nativeElement)
       .select('div.linechart')
       .append('svg')
-      .attr('height', this.height)
-      .attr('width', this.width);
+      .attr('height', this.height);
     this.svgInner = this.svg
       .append('g')
       .style('transform', 'translate(' + this.margin + 'px, ' + this.margin + 'px)');
@@ -103,8 +106,40 @@ export class ItemYearvisitorschartComponent implements OnInit {
       .append('g')
       .append('path')
       .attr('id', 'line')
-      .style('shadow', 'yellow')
+      .style('fill', 'none')
       .style('stroke', 'green')
       .style('stroke-width', '2px')
-  }  
+  }
+
+  private drawChart(): void {
+    this.width = this.chartElem.nativeElement.getBoundingClientRect().width;
+    this.svg.attr('width', this.width);
+
+    this.xScale.range([this.margin, this.width - 2 * this.margin]);
+
+    // const xAxis = d3
+    //   .axisBottom<Date>(this.xScale)
+    //   .ticks(10)
+    //   .tickFormat(d3.timeFormat('%m / %Y'));
+    // this.xAxis.call(xAxis);
+
+    // const yAxis = d3
+    //   .axisLeft(this.yScale);
+    // this.yAxis.call(yAxis);
+
+    const line = d3
+      .line()
+      .x(d => d[0])
+      .y(d => d[1])
+      .curve(d3.curveMonotoneX);
+
+    const points: [number, number][] = this.data.map(d => [
+      this.xScale(new Date(d.date)),
+      this.yScale(d.value),
+    ]);
+
+    this.lineGroup.attr('d', line(points));
+  }
+
+
 }
