@@ -14,17 +14,3 @@ export const StatsBarChart: IncomeExpense[] = [
     {month: 'Nov20', incomeValue: 19000, expenseValue: 8000},
     {month: 'Dec20', incomeValue: 33000, expenseValue: 41000},
 ];
-
-// export const StatsBarChart: Expense[] = [
-//     {month: 'Jan20', value: [49000, 35000]},
-//     {month: 'Feb20', value: [49000, 35000]},
-//     {month: 'Mar20', value: [49000, 35000]},
-//     {month: 'Apr20', value: [49000, 35000]},
-//     {month: 'May20', value: [49000, 35000]},
-//     {month: 'Jun20', value: [49000, 35000]},
-//     {month: 'Jul20', value: [49000, 35000]},
-//     {month: 'Aug20', value: [49000, 35000]},
-//     {month: 'Sep20', value: [49000, 35000]},
-//     {month: 'Nov20', value: [49000, 35000]},
-//     {month: 'Dec20', value: [49000, 35000]}
-// ];
