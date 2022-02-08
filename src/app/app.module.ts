@@ -57,6 +57,8 @@ import { ChElDonutchartComponent } from './components/ch-el-donutchart/ch-el-don
 import { UiElTablesComponent } from './components/ui-el-tables/ui-el-tables.component';
 import { ChElLinegraphComponent } from './components/ch-el-linegraph/ch-el-linegraph.component';
 import { ChElWorldmapComponent } from './components/ch-el-worldmap/ch-el-worldmap.component';
+import { ChElSalesbycountrychartComponent } from './components/ch-el-salesbycountrychart/ch-el-salesbycountrychart.component';
+import { ChElYearvisitorschartComponent } from './components/ch-el-yearvisitorschart/ch-el-yearvisitorschart.component';
 
 @NgModule({
   declarations: [
@@ -115,6 +117,8 @@ import { ChElWorldmapComponent } from './components/ch-el-worldmap/ch-el-worldma
     UiElTablesComponent,
     ChElLinegraphComponent,
     ChElWorldmapComponent,
+    ChElSalesbycountrychartComponent,
+    ChElYearvisitorschartComponent,
   ],
   imports: [
     BrowserModule,

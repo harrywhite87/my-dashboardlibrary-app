@@ -1,0 +1,129 @@
+.Flag {
+    width: 25px;
+    border-radius: 50% !important;
+}
+
+.pl-1 {
+    padding-left: 4%;
+}
+.pl-5 {
+    padding-left: 20%;
+}
+
+.h5-bold {
+    font-size: 1.25em;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    // margin-bottom: 1em;
+}
+
+//grid1
+.grid1 {
+    display: grid;
+    grid-template-columns: 6fr .01fr 5fr;
+    // gap: 1em;
+}
+.grid1 > div {
+    // background: #eee;
+    // padding: 1em;
+}
+.grid1 > div:nth-child(odd) {
+    // background: #ddd;
+}
+
+//grid1-1
+.grid1-1 {
+    display: grid;
+    // grid-template-columns: 70% 30%;
+}
+
+.grid1-1 > div {
+    // background: #eee;
+    // padding: 1em;
+}
+
+.grid1-1 > div:nth-child(odd) {
+    // background: #ddd;
+}
+
+// .icon:hover {
+//     fill: #DA4567;
+//   }
+
+svg path:hover{
+    fill: green !important;
+}
+
+//grid1-2
+.grid1-2 {
+    display: grid;
+    // grid-template-columns: 70% 30%;
+    grid-auto-rows: minmax(25px, auto);
+    // border-left: 1px solid #959ab4;
+}
+
+.grid1-2 > div {
+    // background: #eee;
+    // padding: 0em 0.5em 0em 1em;
+    border-bottom: 1px solid #ddd;
+}
+
+.grid1-2 > div:nth-child(odd) {
+    // background: #ddd;
+}
+
+.vertical-line{
+    display: inline-block;
+    border-left: 1px solid #ccc;
+    margin: 0 10px;
+    height: 430px;
+}
+
+//grid1-2-1
+.grid1-2-1 {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;//repeat(3, 1fr);
+    justify-content: center;
+    align-content: center;
+}
+.grid1-2-1 > div {
+    // background: #eee;
+    // padding: 1em;    
+}
+.grid1-2-1 > div:nth-child(odd) {
+    // background: #ddd;
+}
+
+.grid1-2-1-text {
+    font-weight: 600;
+    color: #000;
+}
+
+.grid1-2-title {
+    color: #BBBFCF;
+}
+
+//grid1-2-2
+.grid1-2-2 {
+    display: grid;
+    grid-template-columns: 1fr 4fr;//repeat(2, 1fr);
+    grid-auto-rows: minmax(25px, auto);
+    justify-content: center;
+    align-content: center;
+}
+.grid1-2-2 > div {
+    
+}
+.grid1-2-2 > div:nth-child(odd) {
+    // background: #ddd;
+}
+
+//grid1-2-2-1
+.grid1-2-2-1 {
+    width: 25px; 
+    height: 25px;
+}
+
+#world-map {
+    background-color: #b4ceff;    
+}
