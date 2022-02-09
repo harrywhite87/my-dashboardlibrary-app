@@ -79,7 +79,7 @@ export class ChElDonutchartComponent implements OnInit {
       .outerRadius(this.radius);   
   }
 
-  handleMouseOver(d:any, i:any) {  // Add interactivity
+  handleMouseOver(d:any, i:any) {
     d3.select("#tooltipDonut")
       .select("#salesProduct")
       .text(i.data.product);

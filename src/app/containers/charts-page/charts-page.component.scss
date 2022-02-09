@@ -71,8 +71,6 @@ $paddingSize: 1em;
 .grid3 {
     display: grid;
     grid-template-columns: 3fr 1fr;
-    // column-gap: 1em;
-    // row-gap: 1em;
     gap: $gapSize;    
     grid-auto-rows: minmax(100px, auto); //grid-auto-rows: 400px;
     margin-bottom:  1em;
@@ -94,7 +92,7 @@ $paddingSize: 1em;
     display: grid;
     grid-template-columns: 5fr 2fr;
     gap: $gapSize;
-    grid-auto-rows: minmax(175px, auto); //400px; //minmax(175px, auto);
+    grid-auto-rows: minmax(175px, auto); 
     min-height: 0;
     margin-bottom:  1em;
 }
@@ -102,7 +100,6 @@ $paddingSize: 1em;
     background: #ffffff;
     padding: $paddingSize;
     border-radius: 5px;
-    // overflow: hidden;
 }
 
 .grid5-1 {
@@ -111,5 +108,3 @@ $paddingSize: 1em;
     margin-bottom:  1em;
     overflow: auto;
 }
-
-//final

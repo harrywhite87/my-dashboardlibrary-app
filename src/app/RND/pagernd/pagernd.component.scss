@@ -7,7 +7,7 @@
 //ROW1
 .ROW1-flexbox-container {
     display: flex;
-    justify-content: flex-start; //this is the default value === left
+    justify-content: flex-start;
     border: 1px solid rgb(117, 117, 117);
 }
 .ROW1-flexbox-row {
@@ -28,7 +28,7 @@
 //ROW2
 .ROW2-flexbox-container {
     display: flex;    
-    justify-content: center; //will center the columns
+    justify-content: center; 
     border: 1px solid rgb(117, 117, 117);
 }
 .ROW2-flexbox-row {
@@ -49,7 +49,7 @@
 //ROW20
 .ROW20-flexbox-container {
     display: flex;    
-    justify-content: flex-end; //will center the columns === right
+    justify-content: flex-end; 
     border: 1px solid rgb(117, 117, 117);
 }
 .ROW20-flexbox-row {
@@ -438,7 +438,7 @@
     height: 1500px;
     display: flex;   
     flex-direction: column;
-    justify-content: flex-end; //makes horizontally center
+    justify-content: flex-end; 
     border: 1px solid rgb(117, 117, 117);
 }
 .ROW18-flexbox-row {
@@ -464,8 +464,8 @@
     height: 1500px;
     display: flex;   
     flex-direction: column;
-    justify-content: center; //makes horizontally center
-    align-items: center; //makes vertically center
+    justify-content: center; 
+    align-items: center; 
     border: 1px solid rgb(117, 117, 117);
 }
 .ROW19-flexbox-row {
@@ -491,8 +491,8 @@
     height: 1500px;
     display: flex;   
     flex-direction: column;
-    justify-content: flex-start; //makes horizontally center
-    align-items: center; //makes vertically center
+    justify-content: flex-start; 
+    align-items: center; 
     border: 1px solid rgb(117, 117, 117);
 }
 .ROW21-flexbox-row {
@@ -518,8 +518,8 @@
     height: 1500px;
     display: flex;   
     flex-direction: column;
-    justify-content: flex-end; //makes horizontally center
-    align-items: center; //makes vertically center
+    justify-content: flex-end; 
+    align-items: center; 
     border: 1px solid rgb(117, 117, 117);
 }
 .ROW22-flexbox-row {
@@ -545,8 +545,8 @@
     height: 1500px;
     display: flex;   
     flex-direction: column;
-    justify-content: center; //makes horizontally center
-    align-items: flex-end; //makes vertically center
+    justify-content: center; 
+    align-items: flex-end; 
     border: 1px solid rgb(117, 117, 117);
 }
 .ROW23-flexbox-row {
@@ -572,8 +572,8 @@
     height: 1500px;
     display: flex;   
     flex-direction: column;
-    justify-content: flex-start; //makes horizontally center
-    align-items: flex-end; //makes vertically center
+    justify-content: flex-start; 
+    align-items: flex-end; 
     border: 1px solid rgb(117, 117, 117);
 }
 .ROW24-flexbox-row {
@@ -599,8 +599,8 @@
     height: 1500px;
     display: flex;   
     flex-direction: column;
-    justify-content: flex-end; //makes horizontally center
-    align-items: flex-end; //makes vertically center
+    justify-content: flex-end; 
+    align-items: flex-end; 
     border: 1px solid rgb(117, 117, 117);
 }
 .ROW25-flexbox-row {
@@ -741,12 +741,12 @@
 .ROW30-flexbox-row-2 {
     min-height: 200px;
     flex-grow: 1;
-    flex-basis: 0; // this will make the size of element exactly the flex-grow value represent, means element having flex-grow = 2 is twice size than element having flex-grow value = 1
+    flex-basis: 0; 
 }
 .ROW30-flexbox-row-3 {
     min-height: 300px;
     flex-grow: 2;
-    flex-basis: 0; // this will make the size of element exactly the flex-grow value represent, means element having flex-grow = 2 is twice size than element having flex-grow value = 1
+    flex-basis: 0; 
 }
 .ROW30-flexbox-row-4 {
     min-height: 400px;
@@ -769,13 +769,13 @@
 .ROW31-flexbox-row-2 {
     min-height: 200px;
     flex-grow: 1;
-    flex-basis: 0; // this will make the size of element exactly the flex-grow value represent, means element having flex-grow = 2 is twice size than element having flex-grow value = 1
+    flex-basis: 0; 
     align-self: center;
 }
 .ROW31-flexbox-row-3 {
     min-height: 300px;
     flex-grow: 2;
-    flex-basis: 0; // this will make the size of element exactly the flex-grow value represent, means element having flex-grow = 2 is twice size than element having flex-grow value = 1
+    flex-basis: 0; 
 }
 .ROW31-flexbox-row-4 {
     min-height: 400px;
@@ -799,13 +799,13 @@
 .ROW32-flexbox-row-2 {
     min-height: 200px;
     flex-grow: 1;
-    flex-basis: 0; // this will make the size of element exactly the flex-grow value represent, means element having flex-grow = 2 is twice size than element having flex-grow value = 1
+    flex-basis: 0; 
     align-self: center;
 }
 .ROW32-flexbox-row-3 {
     min-height: 300px;
     flex-grow: 2;
-    flex-basis: 0; // this will make the size of element exactly the flex-grow value represent, means element having flex-grow = 2 is twice size than element having flex-grow value = 1
+    flex-basis: 0; 
 }
 .ROW32-flexbox-row-4 {
     min-height: 400px;
@@ -829,13 +829,13 @@
 .ROW33-flexbox-row-2 {
     min-height: 200px;
     flex-grow: 1;
-    flex-basis: 0; // this will make the size of element exactly the flex-grow value represent, means element having flex-grow = 2 is twice size than element having flex-grow value = 1
+    flex-basis: 0; 
     align-self: center;
 }
 .ROW33-flexbox-row-3 {
     min-height: 300px;
     flex-grow: 2;
-    flex-basis: 0; // this will make the size of element exactly the flex-grow value represent, means element having flex-grow = 2 is twice size than element having flex-grow value = 1
+    flex-basis: 0; 
 }
 .ROW33-flexbox-row-4 {
     min-height: 400px;
@@ -861,14 +861,14 @@
 .ROW34-flexbox-row-2 {
     min-height: 200px;
     flex-grow: 1;
-    flex-basis: 0; // this will make the size of element exactly the flex-grow value represent, means element having flex-grow = 2 is twice size than element having flex-grow value = 1
+    flex-basis: 0; 
     align-self: center;
     order: 4;
 }
 .ROW34-flexbox-row-3 {
     min-height: 300px;
     flex-grow: 2;
-    flex-basis: 0; // this will make the size of element exactly the flex-grow value represent, means element having flex-grow = 2 is twice size than element having flex-grow value = 1
+    flex-basis: 0; 
     order: 1;
 }
 .ROW34-flexbox-row-4 {
@@ -890,21 +890,21 @@
 }
 .ROW35-flexbox-row-1 {
     min-height: 100px;
-    flex: 1 0 0px;//1st: flex-grow, 2nd: flex-shrink, 3rd: flex-basis
+    flex: 1 0 0px;
     align-self: flex-end;
     order: 3;
 }
 .ROW35-flexbox-row-2 {
     min-height: 200px;
     flex-grow: 1;
-    flex-basis: 0; // this will make the size of element exactly the flex-grow value represent, means element having flex-grow = 2 is twice size than element having flex-grow value = 1
+    flex-basis: 0; 
     align-self: center;
     order: 4;
 }
 .ROW35-flexbox-row-3 {
     min-height: 300px;
     flex-grow: 2;
-    flex-basis: 0; // this will make the size of element exactly the flex-grow value represent, means element having flex-grow = 2 is twice size than element having flex-grow value = 1
+    flex-basis: 0; 
     order: 1;
 }
 .ROW35-flexbox-row-4 {

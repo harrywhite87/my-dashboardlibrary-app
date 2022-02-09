@@ -11,15 +11,12 @@ $rgb_font_size: 15px;
 .ROW3-flexbox-row-1 {
     flex-grow: 1;
     flex-basis: 0;
-    // margin-right: $margin_right;
 }
 .ROW3-1-flexbox-row {
     height: $colorbox_height;
     border-radius: 4px;
 }
 .ROW3-1-flexbox-row-1 {
-    // margin-right: $margin_right;
-    // background-color: #f5f6fa;
 }
 .ROW3-2-flexbox-row-2 {
     text-align: left;
@@ -29,28 +26,3 @@ $rgb_font_size: 15px;
     text-align: left;
     font-size: $rgb_font_size;
 }
-
-// @media screen and (min-width: 400px) and (max-width: 991px) {
-//     .ROW3-3-flexbox-row-2 {
-//         text-align: left;
-//         // font-size: 1rem;
-//     }
-// }
-// @media screen and (min-width: 992px) and (max-width: 1099px) {
-//     .ROW3-3-flexbox-row-2 {
-//         text-align: left;
-//         font-size: $rgb_font_size;
-//     }
-// }
-// @media screen and (min-width: 1100px) and (max-width: 1199px) {
-//     .ROW3-3-flexbox-row-2 {
-//         text-align: left;
-//         font-size: $rgb_font_size;
-//     }
-// }
-// @media screen and (min-width: 1200px) and (max-width: 1399px) {
-//     .ROW3-3-flexbox-row-2 {
-//         text-align: left;
-//         font-size: $rgb_font_size;
-//     }
-// }
