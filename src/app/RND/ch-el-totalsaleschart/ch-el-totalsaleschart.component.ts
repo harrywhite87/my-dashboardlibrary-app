@@ -94,12 +94,11 @@ export class ChElTotalsaleschartComponent implements OnInit {
       .select(this.chartElem.nativeElement)
       .select('div.multi-linechart')
       .append('svg')
-      .attr('height', this.height)
+      .attr('height', this.height);
       
     this.svgInner = this.svg
     .append('g')
-    .style('transform', 'translate(' + this.margin + 'px, ' + this.margin + 'px)')
-    // .style("stroke", "red");
+    .style('transform', 'translate(' + this.margin + 'px, ' + this.margin + 'px)');
     
     this.yScale = d3
       .scaleLinear()
@@ -158,29 +157,14 @@ export class ChElTotalsaleschartComponent implements OnInit {
       .ticks(10)
       .tickFormat(d3.timeFormat('%B'));
     this.xAxis.call(xAxis);
-    
-    d3.select("#x-axis>.domain").remove();
-    d3.selectAll("#x-axis>.tick>line").remove();
-    d3.selectAll("#x-axis>.tick>text")
-      .style("font-weight", "700")
-      .style("font-size", "12px")
-      .style("color", "#A7AAC0");
-    // d3.selectAll("#x-axis>.tick>line").style("color", "#ddd");
-    // d3.select("#x-axis>.domain").style("color", "#ddd");
 
     const yAxis = d3
       .axisLeft(this.yScale);
     // this.yAxis.call(yAxis);
     this.yAxis.call(yAxis);
     this.yAxis.select('.domain')
-      // .attr('stroke-width', 0);
-    this.yAxis.call((g:any) => {
-      g.select(".domain").remove();
-      g.selectAll("line").remove();
-      g.selectAll("text").style("font-weight", "700");
-      g.selectAll("text").style("font-size", "12px");
-      g.selectAll("text").style("color", "#A7AAC0");
-    });
+      .attr('stroke-width', 0);
+    // this.yAxis.call((g:any) => g.select(".domain").remove());
 
     const line = d3
       .line()

@@ -1,0 +1,100 @@
+#barChart {
+    color: #9297b1;
+    height: auto;
+}
+//ROW12-6-1
+.ROW12-6-1-flexbox-container {
+    display: flex;   
+}
+.ROW12-6-1-flexbox-row {
+    margin-right: 5px;
+}
+.ROW12-6-1-flexbox-row-1 {
+}
+
+.ROW9-flexbox-row-1-1 {
+
+}
+
+.ROW12-6-1-flexbox-row-3 {
+    display: flex; 
+    width: 100px;
+    height: 40px;
+    padding: 7px 5px 10px 18px;
+    border: 1px solid #d7dbec;
+    border-radius: 3px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.ROW12-6-1-flexbox-row-3 {
+    color: #7e84a3;
+    fill: #7e84a3;
+}
+.ROW12-6-1-flexbox-row-3:hover {
+    color: #0058FF;
+    fill: #0058FF;
+}
+
+.space-btwn {
+    margin: 20px;
+}
+
+.text1 {
+    margin-top: auto; 
+    margin-bottom: auto; 
+    color: #7e84a3;
+    font-size: 1rem;
+}
+
+.icon1 {
+    width: 10px;   
+    top: -0.05em; 
+    position: relative;
+}
+
+@media (max-width: 768px) {
+    .space-btwn {
+        margin: 5px;
+    }  
+    .text1 {
+        font-size: 0.7rem;
+    }
+    .icon1 {
+        width: 8px;
+        top: -0.3em; 
+        position: relative;
+    }
+    .ROW12-6-1-flexbox-row-3 {
+        // display: flex; 
+        width: 55px;
+        height: 20px;
+        padding: 1px 1px 2px 3px;
+        border: 1px solid #d7dbec;
+        border-radius: 0px;
+    }
+}
+@media (min-width: 768px) {
+    #barChart {
+        height: 250px;
+        // width: 50%;
+    }
+    .space-btwn {
+        margin: 5px;
+    }
+}
+@media (min-width: 991px) {
+    #barChart {
+        height: 350px;
+    }
+}
+@media (min-width: 1199px) {
+    #barChart {
+        height: 400px;
+    }
+}
+@media (min-width: 1399px) {
+    #barChart {
+        height: 450px;
+    }
+}
