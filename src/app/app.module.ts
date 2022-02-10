@@ -42,6 +42,8 @@ import { UiElSidebarfocusedComponent } from './components/ui-el-sidebarfocused/u
 import { UiElSidebarplainComponent } from './components/ui-el-sidebarplain/ui-el-sidebarplain.component';
 import { UiElTabactiveComponent } from './components/ui-el-tabactive/ui-el-tabactive.component';
 import { UiElTabplainComponent } from './components/ui-el-tabplain/ui-el-tabplain.component';
+import { ChElGraphkeysComponent } from './components/ch-el-graphkeys/ch-el-graphkeys.component';
+import { UiInElTooltiplinechartComponent } from './components/ui-in-el-tooltiplinechart/ui-in-el-tooltiplinechart.component';
 
 @NgModule({
   declarations: [
@@ -85,6 +87,8 @@ import { UiElTabplainComponent } from './components/ui-el-tabplain/ui-el-tabplai
     UiElSidebarplainComponent,
     UiElTabactiveComponent,
     UiElTabplainComponent,
+    ChElGraphkeysComponent,
+    UiInElTooltiplinechartComponent,
   ],
   imports: [
     BrowserModule,

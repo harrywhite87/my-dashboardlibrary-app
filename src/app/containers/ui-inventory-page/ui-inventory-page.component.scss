@@ -3,7 +3,7 @@ $grey_text: #7E84A3;
 //grid1
 .g1 {
     display: grid;
-    background-color: #fff;
+    background-color: #F4F7FC;
 }
 .g1 > div {
 }
@@ -370,5 +370,5 @@ $grey_text: #7E84A3;
     padding: 1em;
 }
 .g1-r12 > div:nth-child(odd) {
-    background: #ddd;
+    background: #F4F7FC;
 }

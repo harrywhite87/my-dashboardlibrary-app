@@ -1,6 +1,6 @@
 import { Component, OnInit, Input, ElementRef } from '@angular/core';
 
-import * as d3 from "d3";
+import * as d3 from 'd3';
 
 @Component({
   selector: 'app-ch-el-linegraph',
@@ -9,252 +9,133 @@ import * as d3 from "d3";
 })
 export class ChElLinegraphComponent implements OnInit {
 
-  maxAllowed = 0;
-  graphData = [
+  @Input() width: number = 250; 
+  @Input() height: number = 100; 
+  @Input() color: string = "green"; 
+
+  @Input() data = [
     {
-      hrCount: 4,
-      adjCount: 2
+      "value": 30,
+      "date": "2020-05-12T12:19:00+00:00"
     },
     {
-      hrCount: 8,
-      adjCount: 5
+      "value": 35,
+      "date": "2020-05-14T12:19:00+00:00"
     },
     {
-      hrCount: 12,
-      adjCount: 10
+      "value": 25,
+      "date": "2020-05-16T12:19:00+00:00"
     },
     {
-      hrCount: 16,
-      adjCount: 13
+      "value": 38,
+      "date": "2020-05-18T12:19:00+00:00"
     },
     {
-      hrCount: 20,
-      adjCount: 19
+      "value": 45,
+      "date": "2020-05-20T12:19:00+00:00"
     },
     {
-      hrCount: 24,
-      adjCount: 25
+      "value": 34,
+      "date": "2020-05-22T12:19:00+00:00"
     },
     {
-      hrCount: 28,
-      adjCount: 33
+      "value": 37,
+      "date": "2020-05-24T12:19:00+00:00"
     },
     {
-      hrCount: 32,
-      adjCount: 37
+      "value": 15,
+      "date": "2020-05-26T12:19:00+00:00"
     },
     {
-      hrCount: 36,
-      adjCount: 40
+      "value": 25,
+      "date": "2020-05-28T12:19:00+00:00"
     },
-    {
-      hrCount: 40,
-      adjCount: 42
-    },
-    {
-      hrCount: 44,
-      adjCount: 44
-    },
-    {
-      hrCount: 48,
-      adjCount: 47
-    },
-    {
-      hrCount: 52,
-      adjCount: 48
-    },
-    {
-      hrCount: 56,
-      adjCount: 50
-    },
-    {
-      hrCount: 60,
-      adjCount: 53
-    }
   ];
 
+  private margin = 0;
+  public svg: any;
+  public svgInner: any;
+  public yScale: any;
+  public xScale: any;
+  public xAxis: any;
+  public yAxis: any;
+  public lineGroup: any;
+  
   constructor(public chartElem: ElementRef) { }  
-
+  
   ngOnInit(): void {
-    // this.maxAllowed = d3.max(this.graphData, (d: any) => d.hrCount) + 5;
-    // this.drawGraph();
+    this.initializeChart();
+    this.drawChart();
+
+    window.addEventListener('resize', () => this.drawChart());
   }
 
-  // drawGraph() {
-  //   const margin = { top: 25, right: 25, bottom: 25, left: 25 };
-  //   // const width = document.getElementById("svgcontainer").parentElement.offsetWidth - (margin.left + margin.right);
-  //   const width = window.document.getElementById("svgcontainer")?.parentElement?.offsetWidth;// - (margin.left + margin.right);
-  //   // const height = document.getElementById("svgcontainer").parentElement.offsetHeight -
-  //   const height = window.document.getElementById("svgcontainer")?.parentElement?.offsetHeight; // -
-  //     (margin.top + margin.bottom);
+  private initializeChart(): void {
+    this.svg = d3
+      .select(this.chartElem.nativeElement)
+      .select('div.linechart')
+      .append('svg')
+      .attr('height', this.height);
+    this.svgInner = this.svg
+      .append('g')
+      .style('transform', 'translate(' + this.margin + 'px, ' + this.margin + 'px)');
 
-  //   // Remove any existing SVG
-  //   d3.select("#svgcontainer")
-  //     .selectAll("svg > *")
-  //     .remove();
+    this.yScale = d3
+      .scaleLinear()
+      .domain([
+        d3.max(this.data, d => d.value) as number + 1,
+        d3.min(this.data, d => d.value) as number - 1
+      ])
+      .range([0, this.height - 2 * this.margin]);
 
-  //   // Group
-  //   const g = d3
-  //     .select("#svgcontainer")
-  //     .append("svg")
-  //     .attr("width", width? + margin.left + margin.right:Number)
-  //     .attr("height", height? + margin.top + margin.bottom:Number)
-  //     .append("g")
-  //     .attr("transform", "translate(" + margin.left + ", " + margin.top + ")");
+    this.yAxis = this.svgInner
+      .append('g')
+      .attr('id', 'y-axis')
+      .style('transform', 'translate(' + this.margin + 'px,  0)');
 
-  //   // Scale
-  //   // x-scale
-  //   const xScale = d3
-  //     .scaleBand()
-  //     .domain(this.graphData.map((d: any) => d.hrCount))
-  //     .range([0, width?]);
-  //   // y-scale
-  //   const yScale = d3
-  //     .scaleLinear()
-  //     .domain([0, this.maxAllowed])
-  //     .range([height, 0]);
+    this.xScale = d3.scaleTime().domain(<[Date, Date]>d3.extent(this.data, d => new Date(d.date)));
 
-  //   // y-axis gridline
-  //   g.append("g")
-  //     .attr("class", "y-axis-grid")
-  //     .call(
-  //       d3
-  //         .axisLeft(yScale)
-  //         .tickSize(-width)
-  //         .tickFormat("")
-  //         .ticks(5)
-  //     );
+    this.xAxis = this.svgInner
+      .append('g')
+      .attr('id', 'x-axis')
+      .style('transform', 'translate(0, ' + (this.height - 2 * this.margin) + 'px)');
 
-  //   // Shadow effect
-  //   const defs = g.append("defs");
-  //   const filter = defs.append("filter").attr("id", "shadow");
-  //   filter
-  //     .append("feOffset")
-  //     .attr("in", "SourceGraphic")
-  //     .attr("dx", 0)
-  //     .attr("dy", 10)
-  //     .attr("result", "offOut");
-  //   filter
-  //     .append("feGaussianBlur")
-  //     .attr("in", "offOut")
-  //     .attr("stdDeviation", 10)
-  //     .attr("result", "blurOut");
-  //   filter
-  //     .append("feBlend")
-  //     .attr("in", "SourceGraphic")
-  //     .attr("in2", "blurOut")
-  //     .attr("mode", "normal");
+    this.lineGroup = this.svgInner
+      .append('g')
+      .append('path')
+      .attr('id', 'line')
+      .style('fill', 'none')
+      .style('stroke', this.color)
+      .style('stroke-width', '2px')
+  }
 
-  //   const grad = defs
-  //     .append('linearGradient')
-  //     .attr('id', 'grad')
-  //     .attr('x1', '0%')
-  //     .attr('x2', '0%')
-  //     .attr('y1', '0%')
-  //     .attr('y2', '100%')
-  //     .attr("gradientTransform","rotate(-45)")
+  private drawChart(): void {
+    // this.width = this.chartElem.nativeElement.getBoundingClientRect().width;
+    this.svg.attr('width', this.width);
 
-  //   var colors = [ ['rgb(70,130,180)', '1'], ['rgb(70,130,180)', '0.3'], ['rgb(70,130,180)', '0'] ];
+    this.xScale.range([this.margin, this.width - 2 * this.margin]);
 
-  //   grad.selectAll('stop')
-  //     .data(colors)
-  //     .enter()
-  //     .append('stop')
-  //     .style('stop-color', function(d){ return d[0]; })
-  //     .style('stop-opacity', function(d){ return d[1]; })
-  //     .attr('offset', function(d,i){
-  //       return 100 * (i / (colors.length - 1)) + '%';
-  //     })
+    // const xAxis = d3
+    //   .axisBottom<Date>(this.xScale)
+    //   .ticks(10)
+    //   .tickFormat(d3.timeFormat('%m / %Y'));
+    // this.xAxis.call(xAxis);
 
-  //   // Axis
-  //   // x-axis
-  //   const xAxis = d3.axisBottom(xScale).tickSizeOuter(0);
-  //   g.append("g")
-  //     .attr("transform", "translate(0, " + height + ")")
-  //     .attr("class", "graph-axis")
-  //     .call(xAxis.scale(xScale))
-  //     .append("text")
-  //     .attr("x", width)
-  //     .attr("y", -6)
-  //     .attr("text-anchor", "end")
-  //     .attr("font", "10px sans-serif")
-  //     .attr("letter-spacing", "1px")
-  //     .attr("fill", "#8997b1")
-  //     .text("Hours");
-  //   // y-axis
-  //   const yAxis = d3
-  //     .axisLeft(yScale)
-  //     .ticks(5)
-  //     .tickSizeOuter(0);
-  //   g.append("g")
-  //     .attr("class", "graph-axis y-axis-tick")
-  //     .call(yAxis.scale(yScale))
-  //     .append("text")
-  //     .attr("transform", "rotate(-90)")
-  //     .attr("y", 6)
-  //     .attr("dy", ".71em")
-  //     .style("text-anchor", "end")
-  //     .attr("font", "10px sans-serif")
-  //     .attr("letter-spacing", "1px")
-  //     .attr("fill", "#8997b1")
-  //     .text("Adjusters");
+    // const yAxis = d3
+    //   .axisLeft(this.yScale);
+    // this.yAxis.call(yAxis);
 
-  //   // Data line
-  //   const line = d3
-  //     .line()
-  //     .x((d: any) => xScale(d.hrCount) + xScale.bandwidth() / 2)
-  //     .y((d: any) => yScale(d.adjCount));
+    const line = d3
+      .line()
+      .x(d => d[0])
+      .y(d => d[1])
+      .curve(d3.curveMonotoneX);
 
-  //   // define the area
-  //   var area = d3.area()
-  //     .x((d: any) => xScale(d.hrCount) + xScale.bandwidth() / 2)
-  //     .y0(height)
-  //     .y1((d: any) => yScale(d.adjCount));
+    const points: [number, number][] = this.data.map(d => [
+      this.xScale(new Date(d.date)),
+      this.yScale(d.value),
+    ]);
 
-  //   const path = g
-  //     .append("path")
-  //     .attr("fill", "none")
-  //     .attr("stroke", "#088dda")
-  //     .attr("stroke-width", "2px")
-  //     //.style("filter", "url(#shadow)")
-  //     .attr("d", line(this.graphData));
-
-  //   g.append("path")
-  //      .attr("class", "area")
-  //      .attr("d", area(this.graphData))
-  //      .attr("fill", "url(#grad")
-
-  //   // Transition
-  //   const totalLength = path.node().getTotalLength();
-  //   path
-  //     .attr("stroke-dasharray", totalLength + " " + totalLength)
-  //     .attr("stroke-dashoffset", totalLength);
-  //   path
-  //     .transition()
-  //     .duration(5000)
-  //     .attr("stroke-dashoffset", 0);
-
-  //   // Data dots
-  //   g.selectAll("line-circle")
-  //     .data(this.graphData)
-  //     .enter()
-  //     .append("circle")
-  //     .attr("r", 4)
-  //     .attr("fill", (d: any) => {
-  //       if (d.hrCount === 0) {
-  //         return "none";
-  //       } else {
-  //         return "#088dda";
-  //       }
-  //     })
-  //     .attr("cx", (d: any) => xScale(d.hrCount) + xScale.bandwidth() / 2)
-  //     .attr("cy", (d: any) => yScale(d.adjCount));
-
-  //   // Removing y-axis 0 tick-line
-  //   d3.selectAll(".y-axis-tick .tick line").each(function(d, i) {
-  //     if (i === 0) {
-  //       this.remove();
-  //     }
-  //   });
-  // }
+    this.lineGroup.attr('d', line(points));
+  }
 }

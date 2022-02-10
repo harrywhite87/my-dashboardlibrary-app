@@ -1,0 +1,30 @@
+//grid2
+.grid2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-family: 'Poppins', sans-serif;
+}
+.grid2 > div {
+    height: fit-content;
+    // background: #eee;
+    // padding: 1em;
+    overflow: hidden;
+}
+.grid2 > div:nth-child(odd) {
+    // background: #ddd;
+}
+
+.grid1-2-1 {
+    font-size: medium;
+    color: red;
+}
+
+.grid1-1 {
+    font-size: large;
+    font-weight: 800;
+}
+
+.grid1-2-3 {
+    font-size: small;
+    color: #959ab4;
+}

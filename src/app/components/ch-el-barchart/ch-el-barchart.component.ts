@@ -13,6 +13,10 @@ import * as d3Axis from 'd3-axis';
   styleUrls: ['./ch-el-barchart.component.scss']
 })
 export class ChElBarchartComponent implements OnInit {
+
+  keyIconColor: string = "#0058ff";
+  keyText: string = "Income";
+
   currentRate = 8;
   title = 'D3 Barchart with Angular 13';
   width: number;

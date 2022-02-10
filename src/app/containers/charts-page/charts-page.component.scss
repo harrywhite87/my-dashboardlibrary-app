@@ -4,13 +4,13 @@ $paddingSize: 1em;
 .h5-bold {
     font-size: 1.25em;
     font-weight: 600;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
     margin-bottom: 1em;
 }
 .h5-regular {
     font-size: 1em;
     font-weight: 400;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
     margin-bottom: 1em;
     color: #959ab4;
 }
@@ -32,9 +32,9 @@ $paddingSize: 1em;
     padding: $paddingSize;
     border-radius: 5px;
 }
-.grid1 > div:nth-child(odd) {
-    background: #ddd;
-}
+// .grid1 > div:nth-child(odd) {
+//     background: #ddd;
+// }
 .grid1-1 {
     display: grid;
     grid-auto-rows: minmax(30px, auto);
