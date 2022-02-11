@@ -44,6 +44,7 @@ import { UiElTabactiveComponent } from './components/ui-el-tabactive/ui-el-tabac
 import { UiElTabplainComponent } from './components/ui-el-tabplain/ui-el-tabplain.component';
 import { ChElGraphkeysComponent } from './components/ch-el-graphkeys/ch-el-graphkeys.component';
 import { UiInElTooltiplinechartComponent } from './components/ui-in-el-tooltiplinechart/ui-in-el-tooltiplinechart.component';
+import { HomeComponent } from './containers/home/home.component';
 
 @NgModule({
   declarations: [
@@ -89,6 +90,7 @@ import { UiInElTooltiplinechartComponent } from './components/ui-in-el-tooltipli
     UiElTabplainComponent,
     ChElGraphkeysComponent,
     UiInElTooltiplinechartComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,126 @@
+$main_radius:5px;
+$main_padding:5px;
+$main_bgcolor:#fff;
+
+.container {
+    display: grid;
+    height: 200vh;
+    grid-template-columns: 0.5fr 1fr 1fr 1fr;
+    grid-template-rows: 0.4fr 0.4fr 1fr 3.4fr 2.4fr 3fr 0.4fr;
+
+    grid-template-areas: 
+        "nav nav nav nav"
+        "sidebar header header header"
+        "sidebar con_av_or_va con_or_qu con_un_pu"
+        "sidebar con_to_sa con_to_sa con_to_sa"
+        "sidebar con_sa_by_co con_sa_by_co con_vi_yr"
+        "sidebar con_sa_re con_sa_re con_sa_by_pr"
+        "footer footer footer footer";
+    gap: 1rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 12px;
+    color: #004d40;
+    text-align: center;
+}
+
+nav {
+    background-color: $main_bgcolor;
+    grid-area: nav;
+    padding-top: $main_padding;
+}
+
+#sidebar {
+    background-color: $main_bgcolor;
+    grid-area: sidebar;
+    border-radius: $main_radius;
+    padding-top: $main_padding;
+    min-width: 20px;
+}
+
+#header {
+    background-color: $main_bgcolor;
+    grid-area: header;
+    border-radius: $main_radius;
+    padding-top: $main_padding;
+}
+
+#con_av_or_va {
+    background-color: $main_bgcolor;
+    grid-area: con_av_or_va;
+    border-radius: $main_radius;
+    padding-top: $main_padding;
+}
+#con_or_qu {
+    background-color: $main_bgcolor;
+    grid-area: con_or_qu;
+    border-radius: $main_radius;
+    padding-top: $main_padding;
+}
+#con_un_pu {
+    background-color: $main_bgcolor;
+    grid-area: con_un_pu;
+    border-radius: $main_radius;
+    padding-top: $main_padding;
+}
+
+#con_to_sa {
+    background-color: $main_bgcolor;
+    grid-area: con_to_sa;
+    border-radius: $main_radius;
+    padding-top: $main_padding;
+}
+
+#con_sa_by_co {
+    background-color: $main_bgcolor;
+    grid-area: con_sa_by_co;
+    border-radius: $main_radius;
+    padding-top: $main_padding;
+}
+#con_vi_yr {
+    background-color: $main_bgcolor;
+    grid-area: con_vi_yr;
+    border-radius: $main_radius;
+    padding-top: $main_padding;
+}
+
+#con_sa_re {
+    background-color: $main_bgcolor;
+    grid-area: con_sa_re;
+    border-radius: $main_radius;
+    padding-top: $main_padding;
+}
+#con_sa_by_pr {
+    background-color: $main_bgcolor;
+    grid-area: con_sa_by_pr;
+    border-radius: $main_radius;
+    padding-top: $main_padding;
+}
+
+footer {
+    background-color: $main_bgcolor;
+    grid-area: footer;
+    border-radius: $main_radius;
+    padding-top: $main_padding;
+}
+
+@media only screen and (max-width:550px) {
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.4fr 0.4fr 0.4fr 1fr 3.4fr 2.4fr 2.4fr 3fr 3fr 3fr 3fr 0.4fr;
+        grid-template-areas: 
+            "nav"
+            "sidebar"
+            "header"
+            "con_av_or_va"
+            "con_or_qu"
+            "con_un_pu"
+            "con_to_sa"
+            "con_sa_by_co"
+            "con_vi_yr"
+            "con_sa_re"
+            "con_sa_by_pr"
+            "footer";
+    }
+}
