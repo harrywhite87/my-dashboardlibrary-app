@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 
 import * as d3 from 'd3';
+import { GeometryCollection } from 'geojson';
+// import * as topojson from 'topojson';
+import * as topojson from 'topojson';
+import { feature } from 'topojson';
 
 @Component({
   selector: 'app-ch-el-worldmap',
@@ -23,14 +27,27 @@ export class ChElWorldmapComponent implements OnInit {
 
     const svg = d3.select("#map")
       .append("svg")
+      // .attr("viewBox", "0 0 960 600")
       .attr("height", height + margin.top + margin.bottom)
       .attr("width", width + margin.left - margin.right)
       .append("g")
       .attr("transform", "translate("+margin.left +"," +margin.top +")");
 
-    countries.push(d3.json("https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json").then((data)=> {console.log(data)}))
+    countries.push(
+      d3.json("https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json")
+        .then((data: any, )=> {
+          console.log(data);
+          // const objs = data.objects.countries.geometries.map(function(o:any) { return feature(data, data.objects.countries); });
+          const objs = this.func(data, data.objects.countries);
+          console.log(objs)
+        }).catch((error)=>{
+          console.log(error);
+        })
+    )
+  }
 
-    // console.log(countries.length)
+  func = (topology:any, o:any) => {
+    return o.geometries.map(function(o:any) { return feature(topology, o); })
   }
 
 }
