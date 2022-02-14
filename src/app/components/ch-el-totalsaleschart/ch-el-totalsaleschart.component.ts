@@ -84,7 +84,6 @@ export class ChElTotalsaleschartComponent implements OnInit {
   ngOnInit(): void {
     this.initializeChart();
     this.drawChart();
-
     window.addEventListener('resize', () => this.drawChart());
   }
 
@@ -128,23 +127,6 @@ export class ChElTotalsaleschartComponent implements OnInit {
       .on("mouseover", this.handleMouseOver)
       .on("mousemove", this.handleMouseMove)
       .on("mouseout", this.handleMouseOut);
-  }
-
-  handleMouseOver(d:any, i:any) {  // Add interactivity
-    d3.select("#tooltipLine")
-      .select("#lineValue")
-      .text("$"+i.value/1000+"k")
-  }
-
-  handleMouseMove(d:any, i:any) {
-    d3.select("#tooltipLine")
-      .classed("hidden", false)      
-      .style("top", (d.pageY-10)+"px").style("left",(d.pageX+10)+"px");
-  }
-
-  handleMouseOut(d:any, i:any) {
-    d3.select("#tooltipLine")
-      .classed("hidden", true);
   }
 
   private drawChart(): void {
@@ -199,4 +181,21 @@ export class ChElTotalsaleschartComponent implements OnInit {
 
     this.lineGroup.attr('d', line(points));
   }
+
+  handleMouseOver(d:any, i:any) {  // Add interactivity
+    d3.select("#tooltipLine")
+      .select("#lineValue")
+      .text("$"+i.value/1000+"k")
+  }
+
+  handleMouseMove(d:any, i:any) {
+    d3.select("#tooltipLine")
+      .classed("hidden", false)      
+      .style("top", (d.pageY-10)+"px").style("left",(d.pageX+10)+"px");
+  }
+
+  handleMouseOut(d:any, i:any) {
+    d3.select("#tooltipLine")
+      .classed("hidden", true);
+  }  
 }

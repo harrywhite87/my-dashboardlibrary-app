@@ -8,8 +8,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./ch-el-yearvisitorschart.component.scss']
 })
 export class ChElYearvisitorschartComponent implements OnInit {
+  
+  graphWidth: number = 280;
+  graphHeight: number = 100;
+  graphColor: string = "green";
 
-  public data = [
+  graphData = [
     {
       "value": 30,
       "date": "2020-05-12T12:19:00+00:00"
@@ -49,17 +53,6 @@ export class ChElYearvisitorschartComponent implements OnInit {
   ];
 
   texticonlinkText : string = "More Insights";
-
-  // private width = 250;
-  // private height = 100;
-  // private margin = 0;
-  // public svg: any;
-  // public svgInner: any;
-  // public yScale: any;
-  // public xScale: any;
-  // public xAxis: any;
-  // public yAxis: any;
-  // public lineGroup: any;
 
   constructor() { }
 
