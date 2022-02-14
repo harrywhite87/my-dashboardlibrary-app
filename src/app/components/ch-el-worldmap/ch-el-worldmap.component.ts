@@ -19,10 +19,11 @@ export class ChElWorldmapComponent implements OnInit {
     this.svgInitialize()
   }
 
-  svgInitialize() {
-    const margin = { top: 50, left: 50, right: 50, bottom: 50 };
+  async svgInitialize() {
+    const margin = { top: 10, left: 0, right: 10, bottom: 10 };
     const height = 350 - margin.top - margin.bottom;
     const width = 700 - margin.left - margin.right;
+    let path: any ;
     let countries = [];
 
     const svg = d3.select("#map")
@@ -31,23 +32,35 @@ export class ChElWorldmapComponent implements OnInit {
       .attr("height", height + margin.top + margin.bottom)
       .attr("width", width + margin.left - margin.right)
       .append("g")
-      .attr("transform", "translate("+margin.left +"," +margin.top +")");
+      .attr("transform", "translate("+margin.left +"," +margin.top +")");    
 
     countries.push(
-      d3.json("https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json")
-        .then((data: any, )=> {
+      d3.json("https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json").then((data: any, )=> {
           console.log(data);
-          // const objs = data.objects.countries.geometries.map(function(o:any) { return feature(data, data.objects.countries); });
-          const objs = this.func(data, data.objects.countries);
-          console.log(objs)
+          countries = this.func(data, data.objects.countries);
+          console.log(countries) 
+          
+          const projection = d3.geoMercator()
+            .translate([width/2, height/2])
+            .scale(90)
+
+          path = d3.geoPath().projection(projection)
+
+          svg.selectAll(".country")
+            .data(countries)
+            .enter().append("path")
+            .attr("class", "country")
+            .attr("d", path)
+
         }).catch((error)=>{
           console.log(error);
         })
     )
-  }
+
+    
+  }  
 
   func = (topology:any, o:any) => {
     return o.geometries.map(function(o:any) { return feature(topology, o); })
   }
-
 }
