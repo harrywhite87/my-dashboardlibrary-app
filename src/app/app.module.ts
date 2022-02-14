@@ -25,7 +25,6 @@ import { UiElTooltipdonutchartComponent } from './components/ui-el-tooltipdonutc
 import { UiElTooltipbarchartComponent } from './components/ui-el-tooltipbarchart/ui-el-tooltipbarchart.component';
 import { ChElBarchartComponent } from './components/ch-el-barchart/ch-el-barchart.component';
 import { ChElDonutchartComponent } from './components/ch-el-donutchart/ch-el-donutchart.component';
-import { UiElTablesComponent } from './components/ui-el-tables/ui-el-tables.component';
 import { ChElLinegraphComponent } from './components/ch-el-linegraph/ch-el-linegraph.component';
 import { ChElWorldmapComponent } from './components/ch-el-worldmap/ch-el-worldmap.component';
 import { ChElSalesbycountrychartComponent } from './components/ch-el-salesbycountrychart/ch-el-salesbycountrychart.component';
@@ -71,7 +70,6 @@ import { HomeComponent } from './containers/home/home.component';
     UiElTooltipbarchartComponent,
     ChElBarchartComponent,
     ChElDonutchartComponent,
-    UiElTablesComponent,
     ChElLinegraphComponent,
     ChElWorldmapComponent,
     ChElSalesbycountrychartComponent,
