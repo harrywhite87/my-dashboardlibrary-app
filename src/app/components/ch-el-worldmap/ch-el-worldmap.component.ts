@@ -20,15 +20,15 @@ export class ChElWorldmapComponent implements OnInit {
   }
 
   async svgInitialize() {
-    const margin = { top: 10, left: 0, right: 10, bottom: 10 };
+    const margin = { top: 5, left: 100, right: 20, bottom: 5 };
     const height = 350 - margin.top - margin.bottom;
-    const width = 700 - margin.left - margin.right;
+    const width = 450 - margin.left - margin.right;
     let path: any ;
     let countries = [];
 
     const svg = d3.select("#map")
       .append("svg")
-      // .attr("viewBox", "0 0 960 600")
+      .attr("viewBox", "0 0 550 300")
       .attr("height", height + margin.top + margin.bottom)
       .attr("width", width + margin.left - margin.right)
       .append("g")
@@ -38,7 +38,6 @@ export class ChElWorldmapComponent implements OnInit {
       d3.json("https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json").then((data: any, )=> {
           console.log(data);
           countries = this.func(data, data.objects.countries);
-          console.log(countries) 
           
           const projection = d3.geoMercator()
             .translate([width/2, height/2])
@@ -46,19 +45,26 @@ export class ChElWorldmapComponent implements OnInit {
 
           path = d3.geoPath().projection(projection)
 
+          console.log(countries)
           svg.selectAll(".country")
             .data(countries)
             .enter().append("path")
             .attr("class", "country")
+            // .attr("class", countries.name)
             .attr("d", path)
+            // .attr("fill", "#E6E9F4")
+            .on("mouseover", function(d) {
+              d3.select(this).attr("fill", "#89ABFF")
+            })
+            .on("mouseout", function(d) {
+              d3.select(this).attr("fill", "#E6E9F4")
+            })
 
         }).catch((error)=>{
           console.log(error);
         })
-    )
-
-    
-  }  
+    )    
+  }
 
   func = (topology:any, o:any) => {
     return o.geometries.map(function(o:any) { return feature(topology, o); })
